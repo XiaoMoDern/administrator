@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="../plug-in/jquery-3.4.1.js"></script>
+    <script src="../js/Banner.js"></script>
+    <link rel="stylesheet" href="../css/Banner.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/home-pasge.css">
+
 </head>
 
 <body>
@@ -94,10 +98,90 @@
                         <li><a class="x8" href="">成人用品</a></li>
                     </ul>
                 </div>
+                <div class="inServerMenuList">
+                    <div class="inServerMenuB">
+                        <ul>
+                            <li>
+                                <h3>热门搜索 ></h3>
+                                <a href="">面膜</a>
+                                <a href="">酵素</a>
+                                <a href="">清汁</a>
+                                <a href="">美容</a>
+                                <a href="">姨妈巾</a>
+                                <a href="">白色恋人</a>
+                            </li>
+                            <li>
+                                <h3>热门搜索 ></h3>
+                                <a href="">面膜</a>
+                                <a href="">酵素</a>
+                                <a href="">清汁</a>
+                                <a href="">美容</a>
+                                <a href="">姨妈巾</a>
+                                <a href="">白色恋人</a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="inServerMenuB"></div>
+                    <div class="inServerMenuB"></div>
+                    <div class="inServerMenuB"></div>
+                    <div class="inServerMenuB"></div>
+                    <div class="inServerMenuB"></div>
+                    <div class="inServerMenuB"></div>
+                    <div class="inServerMenuB"></div> -->
+                </div>
             </div>
         </div>
         <!-- 内容部分 -->
-        <div class="main"></div>
+        <div class="main">
+            <!-- 轮播图 -->
+            <div class="ban_wrap">
+                <div class="banner">
+                    <script>
+                        $.getJSON("../js/picture.json", (json) => (new BannerManager(json)).init());
+                    </script>
+                </div>
+                <div class="smallBanner">
+                    <div class="smallBannerT">
+                        <img src="../images/01/(1).png" alt="">
+                    </div>
+                    <div class="smallBannerT">
+                        <img src="../images/01/(2).png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 内容1 -->
+            <div class="hotSales">
+                <div class="content">
+                    <ul>
+                        <li class="hot"><img src="../images/01/hotsale.png" alt=""></li>
+                        <li class="hotPic"><img src="../images/01/11.jpg" alt=""></li>
+                        <li class="hotPic"><img src="../images/01/22.jpg" alt=""></li>
+                        <li class="hotPic"><img src="../images/01/33.jpg" alt=""></li>
+                        <li class="hotPic"><img src="../images/01/44.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 内容2 -->
+            <div class="bandSales">
+                <div class="content">
+                    <h2>
+                        品牌热卖
+                        <span> ブランドの使い方 </span>
+                    </h2>
+                    <div class="inBandSalesMain">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer">
             <div class="content">
 
