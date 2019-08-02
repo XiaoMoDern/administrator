@@ -453,11 +453,20 @@
 }
 
 #Mose .main .bandSales .inBandSalesMain .inBandSalesMainC ul li {
+  overflow: hidden;
   width: 204px;
   box-sizing: border-box;
   float: left;
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
+}
+
+#Mose .main .bandSales .inBandSalesMain .inBandSalesMainC ul li img {
+  transition: transform 0.4s;
+}
+
+#Mose .main .bandSales .inBandSalesMain .inBandSalesMainC ul li img:hover {
+  transform: translateX(-5px);
 }
 
 #Mose .main .bandSales .inBandSalesMain .inBandSalesMainR {

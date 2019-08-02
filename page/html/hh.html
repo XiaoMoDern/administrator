@@ -1,0 +1,12 @@
+
+var arrT = [];
+$(".block").each(function(index, item) {
+    var o = {};
+    o.title = $(item).find("a")[0].title;
+    o.src = $(item).find("a > img")[0].src;
+    o.original_price = Number($(item).find(".originalPrice").html().substr(1));
+    o.sale_price = Number($(item).find(".Tahoma").html());
+    o.active_type = $(item).find(".tahoma_active > span").html();
+    o.active_text = o.active_type == "拼团" ? "包邮包税" : o.active_type;
+    arrT.push(o);
+})
