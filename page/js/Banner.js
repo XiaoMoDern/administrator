@@ -123,7 +123,7 @@ class BannerManager {
                 this.index = index;
                 this.sliderBox.style.left = -this.index * this.sliderBoxItemWidth + "px";
                 this.switchSlider(this.index);
-
+                this.addCss(this.index)
             }
         })
     }
@@ -135,13 +135,13 @@ class BannerManager {
                 $('.ban_wrap').css('background-color', 'rgb(252, 236, 218)')
                 break;
             case 1:
-                $('.ban_wrap').css('background-color', '#ffffff')
+                $('.ban_wrap').css('background-color', '#f1f1f1')
                 break;
             case 2:
                 $('.ban_wrap').css('background-color', 'rgb(126, 224, 253)')
                 break;
             case 3:
-                $('.ban_wrap').css('background-color', '#ffffff')
+                $('.ban_wrap').css('background-color', '#f1f1f1')
                 break;
             case 4:
                 $('.ban_wrap').css('background-color', 'rgb(255, 199, 44)')
@@ -149,17 +149,9 @@ class BannerManager {
             case 5:
                 $('.ban_wrap').css('background-color', '#f1f1f1')
                 break;
-            default:
-                break;
         }
 
     }
-
-    //     background - color: rgb(252, 236, 218);
-    //     background - color: rgb(249, 213, 217);
-    //     background - color: rgb(255, 199, 44);
-    //     background - color: rgb(223, 223, 223);
-    //     background - color: rgb(252, 236, 218);
 }
 
 

@@ -576,6 +576,46 @@
                 }
 
             }
+
+            .jump {
+                position: fixed;
+                top: 10%;
+
+                ul {
+                    width: 64px;
+                    height: 400px;
+
+                    margin-left: 10px;
+
+
+
+                    li {
+                        display: block;
+                        background-color: #fff;
+                        height: 39px;
+                        width: 54px;
+                        border-top: 1px solid #ddd;
+                        border-right: 1px solid #ddd;
+                        border-left: 1px solid #ddd;
+                        text-align: center;
+                        line-height: 20px;
+                        padding: 0px 4px 0px 4px;
+                        color: #999;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 12px;
+
+
+
+                        &:hover {
+                            background: #FF3D3B;
+                        }
+
+                    }
+
+
+                }
+            }
         }
 
     }
@@ -597,7 +637,7 @@
 
             .inFooterInfo {
 
-               ul {
+                ul {
                     float: left;
                     width: 152px;
 
