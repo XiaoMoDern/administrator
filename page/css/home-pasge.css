@@ -470,6 +470,8 @@
 }
 
 #Mose .main .bandSales .inBandSalesMain .inBandSalesMainC ul li img {
+  width: 210px;
+  height: 79px;
   transition: transform 0.4s;
 }
 
@@ -543,7 +545,7 @@
 
 #Mose .main .floor .jump {
   position: fixed;
-  top: 10%;
+  top: 25%;
 }
 
 #Mose .main .floor .jump ul {

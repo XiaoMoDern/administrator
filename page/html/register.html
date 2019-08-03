@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../plug-in/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../js/register.js"></script>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div class="register">
+        <!-- 顶部 -->
+        <div class="header-top">
+        </div>
+
+        <!-- 注册和登录 -->
+
+        <div class="login">
+            <div class="content">
+                <div class="register_L">
+                    <h3>登录</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="table-tit">账号:</td>
+                                <td>
+                                    <input type="text" placeholder="邮箱/手机号/用户名" class="login-1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-tit">密码:</td>
+                                <td>
+                                    <input type="text" class="login-2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button>登录</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span class="lbl_msg">提示：1.登录帐号不能为空! 2.登录密码不能为空!</span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: right">
+                                    <a href="/FindPassword.aspx" class="ew">忘记密码？</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="TY">其他登录方式:</div>
+                                    <br>
+                                    <span class="TU"
+                                        style="vertical-align: bottom; margin-left: 120px; cursor: pointer">
+                                        <img src="../images/01/Aplily_Login.gif" alt="">
+                                        <img src="../images/01/qq_Connect.png" alt="">
+                                    </span>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="register_R">
+                    <div class="tit">免费注册</div>
+                    <ul class="login-nav">
+                        <li id="bb" class="selected">邮箱注册</li>
+                        <li id="bb">手机号注册</li>
+                    </ul>
+                    <script>
+                        $(".login-nav li").click(function () {
+                            $(".login-nav li").each(function () {
+                                $($(this).attr("#bb")).hide();
+                                $(this).addClass("selected").siblings().removeClass("selected");
+                            });
+                            $(this).addClass("selected").siblings().removeClass("selected");
+                        });
+                    </script>
+                    <div class="mailbox">
+                        <div class="mailbox_to">
+                            <label>手机号码：</label>
+                            <input type="text">
+                            <p>手机号为登录账号,请认真填写。</p>
+                        </div>
+                        <div class="mailbox_to">
+                            <label>请输入密码：</label>
+                            <input type="text">
+                            <p>6~16位字符,只能包含字母,数字或下划线</p>
+                        </div>
+                        <div class="mailbox_to">
+                            <label>请再次输入密码：</label>
+                            <input type="text">
+                        </div>
+                        <div class="mailbox_to">
+                            <label>图片验证码: </label>
+                            <input type="text" class="tp">
+                            <span></span>
+                            <span>看不清，换一张 </span>
+                        </div>
+                        <div class="mailbox_to">
+                            <label>请输入验证码:</label>
+                            <input type="text" class="tp">
+                            <bottom class="HY">获取短信验证码</bottom>
+
+                            <p>请输入你所收到的手机验证码。</p>
+                        </div>
+                        <div class="mailbox_to">
+                            <label>从何处得知我们网站：</label>
+                            <input type="text">
+                            <p>从何处得知或推荐人登录邮箱。</p>
+                        </div>
+
+                        <!--  -->
+                        <div class="form-item">
+                            <div>
+                                <input name="protocol" id="protocol" type="checkbox">
+                                <label for="protocol">我已看过并接受</label>
+                                <a href="" target="_blank">《用户协议》</a>
+                            </div>
+                        </div>
+                        <div class="form-item agree"><span class="label"></span> <button
+                                class="button register-btn">注册</button></div>
+
+                        <!--  -->
+                        <div class="phone"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer-bottom">
+        </div>
+
+</body>
+
+
+
+</html>
