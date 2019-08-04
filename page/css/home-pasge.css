@@ -257,13 +257,13 @@
   background: url(../images/01/类目bg_1.png);
 }
 
+#Mose .header .serverMenu .xt {
+  background: #fff;
+}
+
 #Mose .header .serverMenu li {
   height: 50px;
   width: 100%;
-}
-
-#Mose .header .serverMenu li:hover {
-  background: #fff;
 }
 
 #Mose .header .serverMenu li:hover a {
@@ -277,6 +277,13 @@
   text-align: center;
   display: block;
   width: 100%;
+  height: 100%;
+}
+
+#Mose .header .serverMenu li a font {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #Mose .header .serverMenu li .x1 {
@@ -344,6 +351,15 @@
 }
 
 #Mose .header .inServerMenuList .inServerMenuB {
+  display: none;
+}
+
+#Mose .header .inServerMenuList .xq-block {
+  display: block;
+}
+
+#Mose .header .inServerMenuList .inServerMenuB {
+  opacity: .9;
   width: 607px;
   height: 396px;
   border-top: #ccc solid 1px;
@@ -355,7 +371,7 @@
   left: 265px;
   padding: 20px 20px;
   box-sizing: border-box;
-  display: none;
+  z-index: 20;
 }
 
 #Mose .header .inServerMenuList .inServerMenuB li {
@@ -364,12 +380,17 @@
 
 #Mose .header .inServerMenuList .inServerMenuB li h3 {
   font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 2px;
 }
 
 #Mose .header .inServerMenuList .inServerMenuB li a {
   font-size: 12px;
   padding-right: 2px;
   line-height: 12px;
+  color: #666;
+  margin-right: 8px;
 }
 
 #Mose .main {
@@ -508,7 +529,6 @@
   line-height: 38px;
   text-align: center;
   color: #ef0a4a;
-  background: url(../images/01/001.png);
   margin-right: 15px;
 }
 
@@ -545,7 +565,7 @@
 
 #Mose .main .floor .jump {
   position: fixed;
-  top: 25%;
+  top: 30%;
 }
 
 #Mose .main .floor .jump ul {

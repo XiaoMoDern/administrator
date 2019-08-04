@@ -27,7 +27,7 @@
             <div class="ban_wrap">
                 <div class="banner">
                     <script>
-                        $.getJSON("../js/picture.json", (json) => (new BannerManager(json)).init());
+                        $.getJSON("../json-in/picture.json", (json) => (new BannerManager(json)).init());
                     </script>
                 </div>
                 <div class="smallBanner">
@@ -84,9 +84,9 @@
             <div class="floor">
                 <div class="content">
                     <!-- 1楼 -->
-                    <div class="floor_1">
+                    <!-- <div class="floor_1">
                         <div class="f_title">
-                            <span class="f_ico">1F</span>
+                            <span class="f_ico"><img src="../images/01/001.png" alt=""></span>
                             <b>活动推荐</b>
                         </div>
                         <div class="f_con">
@@ -104,34 +104,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <!-- 2 -->
-
-                    <div class="floor_1">
-                        <div class="f_title">
-                            <span class="f_ico">2F</span>
-                            <b>活动推荐</b>
-                        </div>
-                        <div class="f_con">
-                            <div class="f_con_l">
-                                <img src="../images/01/96635961727199580103.jpg" alt="">
-                            </div>
-                            <div class="f_con_r">
-                                <ul>
-                                    <li><img src="../images/01/85636609591563870092.jpg" alt=""></li>
-                                    <li><img src="../images/01/86636407485138183678.jpg" alt=""></li>
-                                    <li><img src="../images/01/86636407484110058678.jpg" alt=""></li>
-                                    <li><img src="../images/01/96635997167784178782.jpg" alt=""></li>
-                                    <li><img src="../images/01/96635997167982306318.jpg" alt=""></li>
-                                    <li><img src="../images/01/85636609599414963842.jpg" alt=""></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
+                    </div> -->
                     <!-- 楼层跳跃 -->
                 </div>
-                <div class="jump">
+                <div class="jump" style=" display: none">
                     <ul>
                         <li class="jump_H">活动推荐</li>
                         <li class="jump_H">保税区闪送</li>

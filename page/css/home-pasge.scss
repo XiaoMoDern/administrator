@@ -273,13 +273,13 @@
             height: 400px;
             background: url(../images/01/类目bg_1.png);
 
+            .xt {
+                background: #fff;
+            }
+
             li {
                 height: 50px;
                 width: 100%;
-
-                &:hover {
-                    background: #fff;
-                }
 
                 &:hover a {
                     color: #FF3D3B;
@@ -292,6 +292,13 @@
                     text-align: center;
                     display: block;
                     width: 100%;
+                    height: 100%;
+
+                    font {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 .x1 {
@@ -362,7 +369,17 @@
 
         .inServerMenuList {
 
+
             .inServerMenuB {
+                display: none;
+            }
+
+            .xq-block {
+                display: block;
+            }
+
+            .inServerMenuB {
+                opacity: .9;
                 width: 607px;
                 height: 396px;
                 border-top: #ccc solid 1px;
@@ -374,19 +391,28 @@
                 left: 265px;
                 padding: 20px 20px;
                 box-sizing: border-box;
-                display: none;
+                z-index: 20;
+
+
+
+
 
                 li {
                     margin-bottom: 12px;
 
                     h3 {
                         font-size: 14px;
+                        font-weight: bold;
+                        color: #333;
+                        padding-bottom: 2px;
                     }
 
                     a {
                         font-size: 12px;
                         padding-right: 2px;
                         line-height: 12px;
+                        color: #666;
+                        margin-right: 8px;
                     }
                 }
 
@@ -539,7 +565,7 @@
                         line-height: 38px;
                         text-align: center;
                         color: #ef0a4a;
-                        background: url(../images/01/001.png);
+                        // background: url(../images/01/001.png);
                         margin-right: 15px;
                     }
 
@@ -582,7 +608,8 @@
 
             .jump {
                 position: fixed;
-                top: 25%;
+                top: 30%;
+
 
                 ul {
                     width: 64px;

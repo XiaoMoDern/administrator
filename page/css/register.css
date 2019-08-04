@@ -251,6 +251,8 @@
   height: 400px;
   background: url(../images/01/类目bg_1.png);
   display: none;
+  position: absolute;
+  z-index: 10;
 }
 
 .register .header .serverMenu li {
