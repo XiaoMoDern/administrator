@@ -61,7 +61,7 @@ $(function () {
 
 
         $(".navAll").mouseover(function () {
-            console.log(888);
+            // console.log(888);
 
             $(".serverMenu").css("display", "block")
 
@@ -98,26 +98,128 @@ $(function () {
 
 
     // ---------------------------------------
+    // 图形验证码
+    let imgCodeText = "";
+
+    (new Captcha({
+        fontSize: 30,
+        content: "wweyeqytruth12334345425"
+    })).draw(document.querySelector('#captcha'), r => {
+        console.log(r, '验证码1');
+        imgCodeText = r;
+    });
+
+
+
+
     // 正则
-    let regUsername = /^[A-Za-z]{6,8}$/;
+    // let regUsername = /^[A-Za-z]{6,8}$/;
     let regPhone = /^1[3-9]\d{9}$/; /* 1开头 第二位3-9 后面全都是数字   11位 */
     let regPassword = /^[a-zA-Z0-9]{6,16}$/;
 
+
+    // 获取标签
+    let tp = $(".tp");
+    console.log(tp);
+
+    var phone = $(".phone");
+    let passwdrdA = $('#passwdrdA');
+    let passwdrdB = $("#passwdrdB");
+    let htnl = "x"
+    let htvl = "√"
+
+
+
+
+
+
+    // 手机号码验证
     phone.blur(function (e) {
+        // 清空格
         let text = $.trim($(this).val());
-        let parent = $(this).parents(".form-item");
-        let msg = $(this).nextAll(".form-group__message");
+        // 判断内容是否为空
+        if (text.length == 0) {
+            // 添加样式
+            // alert("手机号码不能为空！")
+            $(".h1").html(htnl)
+            $(".h1").css("display", "block")
+        } else if (!regPhone.test(text)) {
+            alert("请您输入正确的手机号码！")
+            $(".h1").html(htnl)
+            $(".h1").css("display", "block")
+        } else if (regPhone.test(text)) {
+            $(".h1").html(htvl)
+            $(".h1").css("display", "block")
+        }
+
+
+    });
+    // 密码验证
+    let passwdrdAtext = "";
+    passwdrdA.blur(function (e) {
+        // 清空格
+        let text = $.trim($(this).val());
+        // 判断内容是否为空
+        passwdrdAtext = text;
+        // console.log(passwdrdAtat);
 
         if (text.length == 0) {
-            parent.addClass("form-group-error");
-            msg.html("手机号码不能为空");
-        } else if (!regPhone.test(text)) {
-            parent.addClass("form-group-error");
-            msg.html("请输入正确的手机号码！");
+            // 添加样式
+            $(".h2").html(htnl)
+            $(".h2").css("display", "block")
+        } else if (!regPassword.test(text)) {
+            alert("请您输入正确的密码！")
+            $(".h2").html(htnl)
+            $(".h2").css("display", "block")
+        } else if (regPassword.test(text)) {
+            $(".h2").html(htvl)
+            $(".h2").css("display", "block")
+        }
+
+
+    });
+    // 确认密码
+    passwdrdB.blur(function (e) {
+        // 清空格
+        let text = $.trim($(this).val());
+        console.log(text);
+
+        // 判断内容是否为空
+        if (text.length == 0) {
+            // 添加样式
+            $(".h3").html(htnl)
+            $(".h3").css("display", "block")
+        } else if (passwdrdAtext != text) {
+            alert("您输入的密码不匹配！")
+            $(".h3").html(htnl)
+            $(".h3").css("display", "block")
         } else {
-            parent.removeClass("form-group-error");
+            $(".h3").html(htvl)
+            $(".h3").css("display", "block")
         }
     });
 
+
+    // 图片验证码
+    tp.blur(function (e) {
+        // 清空格
+        let text = $.trim($(this).val());
+        // 判断内容是否为空
+        if (text.length == 0) {
+            // 添加样式
+            // alert("手机号码不能为空！")
+            $(".h4").html(htnl)
+            $(".h4").css("display", "block")
+        } else if (imgCodeText.toLowerCase() != text.toLowerCase()) {
+            alert("验证码不正确！")
+            $(".h4").html(htnl)
+            $(".h4").css("display", "block")
+        } else {
+            $(".h4").html(htvl)
+            $(".h4").css("display", "block")
+        }
+
+
+    });
 
 })

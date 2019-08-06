@@ -8,17 +8,16 @@
     <title>Document</title>
     <script src="../plug-in/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="../css/base.css">
+    <script src="../plug-in/captcha.js"></script>
     <script src="../js/register.js"></script>
     <link rel="stylesheet" href="../css/register.css">
-    <!-- <script src="../js/he-top.js"></script> -->
+
 </head>
 
 <body>
     <div class="register">
         <!-- 顶部 -->
         <div class="header-top">
-
-
         </div>
 
         <!-- 注册和登录 -->
@@ -85,26 +84,39 @@
                         });
                     </script>
                     <div class="mailbox">
-                        <div class="mailbox_to phone">
+                        <!--  -->
+                        <!--  -->
+                        <div class="mailbox_to">
                             <label>手机号码：</label>
-                            <input type="text">
+                            <input type="text" class="phone" id="username">
                             <p>手机号为登录账号,请认真填写。</p>
+                            <span class="pass h1">√</span>
                         </div>
+                        <!--  -->
+                        <!--  -->
                         <div class="mailbox_to">
                             <label>请输入密码：</label>
-                            <input type="text">
+                            <input type="password" id="passwdrdA">
                             <p>6~16位字符,只能包含字母,数字或下划线</p>
+                            <span class="pass h2"></span>
                         </div>
+                        <!--  -->
+                        <!--  -->
                         <div class="mailbox_to">
                             <label>请再次输入密码：</label>
-                            <input type="text">
+                            <input type="password" id="passwdrdB">
+                            <span class="pass h3">√</span>
                         </div>
+                        <!--  -->
+                        <!--  -->
                         <div class="mailbox_to">
                             <label>图片验证码: </label>
                             <input type="text" class="tp">
-                            <span></span>
-                            <span>看不清，换一张 </span>
+                            <canvas width="160px" height="45px" id="captcha"></canvas>
+                            <span class="pass h4">√</span>
                         </div>
+                        <!--  -->
+                        <!--  -->
                         <div class="mailbox_to">
                             <label>请输入验证码:</label>
                             <input type="text" class="tp">
@@ -135,6 +147,7 @@
                 </div>
             </div>
         </div>
+
         <!-- 底部 -->
         <div class="footer-bottom">
         </div>

@@ -569,8 +569,33 @@
   overflow: hidden;
 }
 
+.register .login .register_R .mailbox .form-group-error {
+  border: #cc0904;
+}
+
 .register .login .register_R .mailbox .mailbox_to {
   height: 67px;
+  position: relative;
+}
+
+.register .login .register_R .mailbox .mailbox_to .pass {
+  position: absolute;
+  right: 71px;
+  top: 1px;
+  width: 27px;
+  height: 31px;
+  background: #58bc58;
+  text-align: center;
+  line-height: 31px;
+  display: none;
+}
+
+.register .login .register_R .mailbox .mailbox_to #captcha {
+  width: 130px;
+  height: 32px;
+  position: absolute;
+  top: 0px;
+  margin-left: 5px;
 }
 
 .register .login .register_R .mailbox .mailbox_to label {
@@ -589,6 +614,9 @@
 
 .register .login .register_R .mailbox .mailbox_to span {
   font-size: 12px;
+  position: absolute;
+  right: 68px;
+  top: 7px;
 }
 
 .register .login .register_R .mailbox .mailbox_to input {

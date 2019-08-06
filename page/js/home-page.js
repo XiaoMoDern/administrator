@@ -1,14 +1,13 @@
 $(function () {
 
     // 页面渲染
-    // 楼层假数据
     var data = [{
             products: [{
                 st: "../images/01/001.png",
                 title: "活动推荐",
                 hunt: "",
                 huno: "",
-                src: ["../images/01/116.jpg", "../images/01/126.jpg", "../images/01/129.jpg"],
+                src: ["../images/01/129.jpg", "../images/01/119.jpg", "../images/01/116.jpg"],
                 img: ["../images/01/9.jpg", "../images/01/62.jpg", "../images/01/65.jpg", "../images/01/63.jpg", "../images/01/64.jpg", "../images/01/12.jpg"]
             }]
         },
@@ -18,7 +17,7 @@ $(function () {
                 title: "保税区闪送",
                 hunt: "母婴食品",
                 huno: "母婴食品",
-                src: ["../images/01/115.jpg", "../images/01/116.jpg", "../images/01/126.jpg"],
+                src: ["../images/01/114.jpg", "../images/01/115.jpg", "../images/01/120.jpg"],
                 img: ["../images/01/2.jpg", "../images/01/88.jpg", "../images/01/83.jpg", "../images/01/54.jpg", "../images/01/82.jpg", "../images/01/3.jpg"]
             }]
         },
@@ -28,7 +27,7 @@ $(function () {
                 title: "食品保健",
                 hunt: "母婴食品",
                 huno: "母婴食品",
-                src: ["../images/01/115.jpg", ],
+                src: ["../images/01/130.jpg", "../images/01/125.jpg", "../images/01/124.jpg"],
                 img: ["../images/01/5.jpg", "../images/01/60.jpg", "../images/01/79.jpg", "../images/01/77.jpg", "../images/01/52.jpg", "../images/01/4.jpg"]
             }]
         },
@@ -38,7 +37,7 @@ $(function () {
                 title: "母婴用品",
                 hunt: "",
                 huno: "",
-                src: ["../images/01/115.jpg", ],
+                src: ["../images/01/126.jpg", "../images/01/123.jpg", "../images/01/122.jpg"],
                 img: ["../images/01/7.jpg", "../images/01/86.jpg", "../images/01/89.jpg", "../images/01/85.jpg", "../images/01/61.jpg", "../images/01/8.jpg"]
             }]
         },
@@ -48,7 +47,7 @@ $(function () {
                 title: "美妆个护",
                 hunt: "",
                 huno: "",
-                src: ["../images/01/115.jpg", ],
+                src: ["../images/01/127.jpg", "../images/01/128.jpg", "../images/01/118.jpg"],
                 img: ["../images/01/10.jpg", "../images/01/75.jpg", "../images/01/87.jpg", "../images/01/80.jpg", "../images/01/81.png", "../images/01/17.jpg"]
             }]
         },
@@ -58,7 +57,7 @@ $(function () {
                 title: "家居日化",
                 hunt: "",
                 huno: "",
-                src: ["../images/01/115.jpg", ],
+                src: ["../images/01/111.jpg", "../images/01/112.jpg", "../images/01/116.jpg"],
                 img: ["../images/01/9.jpg", "../images/01/62.jpg", "../images/01/65.jpg", "../images/01/63.jpg", "../images/01/64.jpg", "../images/01/12.jpg"]
             }]
         },
@@ -68,7 +67,7 @@ $(function () {
                 title: "数码电子",
                 hunt: "",
                 huno: "",
-                src: ["../images/01/115.jpg", ],
+                src: ["../images/01/117.jpg", "../images/01/121.jpg", "../images/01/112.jpg"],
                 img: ["../images/01/15.jpg", "../images/01/78.jpg", "../images/01/69.jpg", "../images/01/66.jpg", "../images/01/67.jpg", "../images/01/14.jpg"]
             }]
         },
@@ -78,7 +77,7 @@ $(function () {
                 title: "箱包首饰",
                 hunt: "",
                 huno: "",
-                src: ["../images/01/115.jpg", ],
+                src: ["../images/01/116.jpg", "../images/01/126.jpg", "../images/01/129.jpg"],
                 img: ["../images/01/16.jpg", "../images/01/70.jpg", "../images/01/71.jpg", "../images/01/72.jpg", "../images/01/73.jpg", "../images/01/21.jpg"]
             }]
         },
@@ -88,7 +87,7 @@ $(function () {
                 title: "成人用品",
                 hunt: "",
                 huno: "",
-                src: ["../images/01/115.jpg", ],
+                src: ["../images/01/116.jpg", "../images/01/126.jpg", "../images/01/129.jpg"],
                 img: ["../images/01/18.jpg", "../images/01/90.jpg", "../images/01/91.jpg", "../images/01/92.jpg", "../images/01/93.jpg", "../images/01/19.jpg"]
             }]
         }
@@ -117,7 +116,6 @@ $(function () {
                     let list1 = ele.src.map((elet) => {
                         return `<a class="swiper-slide" href="javascript"><img src="${elet}" alt=""></a> `
                     }).join('');
-                    console.log(list1);
                     return ` 
 
                 <div class="f_title">
@@ -132,19 +130,12 @@ $(function () {
                 </div>
                 </div>
                 <div class="f_con">
-
-
-                <div class="f_con_l" id="swiper-container">
+                <div class="f_con_l swiper-container">
                     <div class="swiper-wrapper">
                     ${list1}
-                    </div>
-                   
-               </div>
-
-
-
-                   
-                    <div class="f_con_r">
+                    </div>   
+               </div>        
+                 <div class="f_con_r">
                         <ul>
                           ${list}
                         </ul>
@@ -179,7 +170,6 @@ $(function () {
     /* 楼层跳跃 */
     //获取标签
     var jump = $(".jump");
-    // console.log(jump);
     var btn = $(".jump_H"); //按钮组
     var box = $(".floor_1"); //楼层组
 
@@ -223,7 +213,7 @@ $(function () {
 
 
         for (var i = 0; i < box.length; i++) {
-            console.log(box.length);
+            // console.log(box.length);
 
             // box[i]相对于版面顶端位置 减50是屏幕顶端和盒子的顶部距离
             if (ertt >= box[i].offsetTop) {
@@ -261,7 +251,7 @@ $(function () {
     // --------------------------------------
     // 小图轮播
 
-    var swiper = new Swiper('#swiper-container', {
+    var swiper = new Swiper('.f_con_l', {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
@@ -269,26 +259,6 @@ $(function () {
             disableOnInteraction: true,
         },
 
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
     });
-
-
-    // $(function () {
-    //     var index = 0;
-    //     var $el = $(".f_con_l").children();
-    //     var len = $el.length;
-    //     if (len <= 1) return;
-    //     setInterval(function () {
-    //         index = ++index == len ? 0 : index;
-    //         $el.fadeOut().eq(index).fadeIn();
-    //     }, 1000);
-    // });
 
 })

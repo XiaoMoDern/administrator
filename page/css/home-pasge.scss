@@ -864,4 +864,89 @@
             }
         }
     }
+
+    // 侧边广告
+    .right_sider {
+        width: 35px;
+        height: 100%;
+        background: #333;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 101;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .mymoxi {
+            margin-top: 60px;
+
+            .mtmr {
+
+                a:hover {
+                    background-color: #f86f76;
+                }
+
+                .FQ {
+                    display: inline-block;
+                    width: 35px;
+                    height: 70px;
+                    line-height: 100px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #fff;
+                }
+
+                .F7 {
+                    display: inline-block;
+                    width: 35px;
+                    height: 40px;
+                    // background-color: #f86f76;
+                    line-height: 40px;
+                }
+
+                .F8 {
+                    display: inline-block;
+                    width: 35px;
+                    height: 40px;
+                    // background-color: #f86f76;
+                }
+            }
+
+            .F1 {
+                background: url(../images/01/sider0.png) no-repeat 5px 15px;
+            }
+
+            .F2 {
+                background: url(../images/01/sider01.png) no-repeat 5px 15px;
+            }
+
+            .F3 {
+                background: url(../images/01/sider02.png) no-repeat 5px 15px;
+            }
+
+            .F4 {
+                background: url(../images/01/sider03.png) no-repeat 5px 15px;
+            }
+
+            .F5 {
+                background: url(../images/01/sider04.png) no-repeat 5px 15px;
+            }
+
+            .F6 {
+                background: url(../images/01/sider05.png) no-repeat 5px 15px;
+            }
+
+            .F7 {
+                background: url(../images/01/sider06.png) no-repeat 9px 15px;
+            }
+
+            .F8 {
+                background: url(../images/01/sider07.png) no-repeat 11px 15px;
+            }
+        }
+
+    }
 }

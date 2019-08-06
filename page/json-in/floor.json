@@ -2,65 +2,81 @@
     "products": [{
         "st": "../images/01/001.png",
         "title": "活动推荐",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "",
+        "huno": "",
+        "src": ["../images/01/129.jpg", "../images/01/119.jpg", "../images/01/116.jpg"],
         "img": ["../images/01/9.jpg", "../images/01/62.jpg", "../images/01/65.jpg", "../images/01/63.jpg", "../images/01/64.jpg", "../images/01/12.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/002.png",
         "title": "保税区闪送",
-        "title-Q": "母婴食品",
-        "title_w": "母婴食品",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "母婴食品",
+        "huno": "母婴食品",
+        "src": ["../images/01/114.jpg", "../images/01/115.jpg", "../images/01/120.jpg"],
         "img": ["../images/01/2.jpg", "../images/01/88.jpg", "../images/01/83.jpg", "../images/01/54.jpg", "../images/01/82.jpg", "../images/01/3.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/003.png",
         "title": "食品保健",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "母婴食品",
+        "huno": "母婴食品",
+        "src": ["../images/01/130.jpg", "../images/01/125.jpg", "../images/01/124.jpg"],
         "img": ["../images/01/5.jpg", "../images/01/60.jpg", "../images/01/79.jpg", "../images/01/77.jpg", "../images/01/52.jpg", "../images/01/4.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/004.png",
         "title": "母婴用品",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "",
+        "huno": "",
+        "src": ["../images/01/126.jpg", "../images/01/123.jpg", "../images/01/122.jpg"],
         "img": ["../images/01/7.jpg", "../images/01/86.jpg", "../images/01/89.jpg", "../images/01/85.jpg", "../images/01/61.jpg", "../images/01/8.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/005.png",
         "title": "美妆个护",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "",
+        "huno": "",
+        "src": ["../images/01/127.jpg", "../images/01/128.jpg", "../images/01/118.jpg"],
         "img": ["../images/01/10.jpg", "../images/01/75.jpg", "../images/01/87.jpg", "../images/01/80.jpg", "../images/01/81.png", "../images/01/17.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/006.png",
         "title": "家居日化",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "",
+        "huno": "",
+        "src": ["../images/01/111.jpg", "../images/01/112.jpg", "../images/01/116.jpg"],
         "img": ["../images/01/9.jpg", "../images/01/62.jpg", "../images/01/65.jpg", "../images/01/63.jpg", "../images/01/64.jpg", "../images/01/12.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/007.png",
         "title": "数码电子",
-        "src": "../images/01/96635961727199580103.jpg",
+        "hunt": "",
+        "huno": "",
+        "src": ["../images/01/117.jpg", "../images/01/121.jpg", "../images/01/112.jpg"],
         "img": ["../images/01/15.jpg", "../images/01/78.jpg", "../images/01/69.jpg", "../images/01/66.jpg", "../images/01/67.jpg", "../images/01/14.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/008.png",
         "title": "箱包首饰",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "",
+        "huno": "",
+        "src": ["../images/01/116.jpg", "../images/01/126.jpg", "../images/01/129.jpg"],
         "img": ["../images/01/16.jpg", "../images/01/70.jpg", "../images/01/71.jpg", "../images/01/72.jpg", "../images/01/73.jpg", "../images/01/21.jpg"]
     }]
 }, {
     "products": [{
         "st": "../images/01/007.png",
         "title": "成人用品",
-        "src": "../images/01/96635962490485505916.jpg",
+        "hunt": "",
+        "huno": "",
+        "src": ["../images/01/116.jpg", "../images/01/126.jpg", "../images/01/129.jpg"],
         "img": ["../images/01/18.jpg", "../images/01/90.jpg", "../images/01/91.jpg", "../images/01/92.jpg", "../images/01/93.jpg", "../images/01/19.jpg"]
     }]
 }]

@@ -767,3 +767,81 @@
 #Mose .footer .copyRight_con .a8 span {
   margin: 0px 10px;
 }
+
+#Mose .right_sider {
+  width: 35px;
+  height: 100%;
+  background: #333;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 101;
+  opacity: 0;
+}
+
+#Mose .right_sider:hover {
+  opacity: 1;
+}
+
+#Mose .right_sider .mymoxi {
+  margin-top: 60px;
+}
+
+#Mose .right_sider .mymoxi .mtmr a:hover {
+  background-color: #f86f76;
+}
+
+#Mose .right_sider .mymoxi .mtmr .FQ {
+  display: inline-block;
+  width: 35px;
+  height: 70px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+#Mose .right_sider .mymoxi .mtmr .F7 {
+  display: inline-block;
+  width: 35px;
+  height: 40px;
+  line-height: 40px;
+}
+
+#Mose .right_sider .mymoxi .mtmr .F8 {
+  display: inline-block;
+  width: 35px;
+  height: 40px;
+}
+
+#Mose .right_sider .mymoxi .F1 {
+  background: url(../images/01/sider0.png) no-repeat 5px 15px;
+}
+
+#Mose .right_sider .mymoxi .F2 {
+  background: url(../images/01/sider01.png) no-repeat 5px 15px;
+}
+
+#Mose .right_sider .mymoxi .F3 {
+  background: url(../images/01/sider02.png) no-repeat 5px 15px;
+}
+
+#Mose .right_sider .mymoxi .F4 {
+  background: url(../images/01/sider03.png) no-repeat 5px 15px;
+}
+
+#Mose .right_sider .mymoxi .F5 {
+  background: url(../images/01/sider04.png) no-repeat 5px 15px;
+}
+
+#Mose .right_sider .mymoxi .F6 {
+  background: url(../images/01/sider05.png) no-repeat 5px 15px;
+}
+
+#Mose .right_sider .mymoxi .F7 {
+  background: url(../images/01/sider06.png) no-repeat 9px 15px;
+}
+
+#Mose .right_sider .mymoxi .F8 {
+  background: url(../images/01/sider07.png) no-repeat 11px 15px;
+}

@@ -621,9 +621,35 @@
                 margin-top: 25px;
                 overflow: hidden;
 
+
+                .form-group-error {
+                    border: #cc0904;
+                }
+
                 .mailbox_to {
                     height: 67px;
+                    position: relative;
 
+
+                    .pass {
+                        position: absolute;
+                        right: 71px;
+                        top: 1px;
+                        width: 27px;
+                        height: 31px;
+                        background: #58bc58;
+                        text-align: center;
+                        line-height: 31px;
+                        display: none;
+                    }
+
+                    #captcha {
+                        width: 130px;
+                        height: 32px;
+                        position: absolute;
+                        top: 0px;
+                        margin-left: 5px;
+                    }
 
                     label {
                         width: 151px;
@@ -642,6 +668,9 @@
 
                     span {
                         font-size: 12px;
+                        position: absolute;
+                        right: 68px;
+                        top: 7px;
                     }
 
                     input {
@@ -654,6 +683,8 @@
                         color: #666666;
                         font-size: 15px;
                         margin-left: 10px;
+
+
                     }
 
                     p {
