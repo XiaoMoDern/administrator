@@ -251,93 +251,145 @@
   height: 400px;
   background: url(../images/01/类目bg_1.png);
   display: none;
-  position: absolute;
-  z-index: 10;
 }
 
-.register .header .serverMenu li {
+.register .header .serverMenu .xt {
+  background: #fff;
+}
+
+.register .header .serverMenu .xq-block {
+  display: block;
+}
+
+.register .header .serverMenu .xt_li {
   height: 50px;
   width: 100%;
 }
 
-.register .header .serverMenu li:hover {
-  background: #fff;
+.register .header .serverMenu .xt_li .inServerMenuB {
+  display: none;
 }
 
-.register .header .serverMenu li:hover a {
+.register .header .serverMenu .xt_li .xq-block {
+  display: block;
+}
+
+.register .header .serverMenu .xt_li .inServerMenuB {
+  opacity: .9;
+  width: 607px;
+  height: 396px;
+  border-top: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+  border-right: #ccc solid 1px;
+  background: #fff;
+  position: absolute;
+  top: 157px;
+  left: 265px;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+.register .header .serverMenu .xt_li .inServerMenuB li {
+  margin-bottom: 12px;
+}
+
+.register .header .serverMenu .xt_li .inServerMenuB li h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 2px;
+}
+
+.register .header .serverMenu .xt_li .inServerMenuB li a {
+  font-size: 12px;
+  padding-right: 2px;
+  line-height: 12px;
+  color: #666;
+  margin-right: 8px;
+}
+
+.register .header .serverMenu .xt_li:hover a {
   color: #FF3D3B;
 }
 
-.register .header .serverMenu li a {
+.register .header .serverMenu .xt_li .nin {
   font-size: 14px;
   color: #fff;
   line-height: 50px;
   text-align: center;
   display: block;
   width: 100%;
+  height: 100%;
 }
 
-.register .header .serverMenu li .x1 {
+.register .header .serverMenu .xt_li .nin font {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.register .header .serverMenu .xt_li:nth-child(1) {
   background: url(../images/01/icon2.png) no-repeat 15px -43px;
 }
 
-.register .header .serverMenu li .x1:hover {
+.register .header .serverMenu .xt_li:nth-child(1):hover {
   background: url(../images/01/icon2.png) no-repeat 15px 7px;
 }
 
-.register .header .serverMenu li .x2 {
+.register .header .serverMenu .xt_li:nth-child(2) {
   background: url(../images/01/icon2.png) no-repeat 15px -143px;
 }
 
-.register .header .serverMenu li .x2:hover {
+.register .header .serverMenu .xt_li:nth-child(2):hover {
   background: url(../images/01/icon2.png) no-repeat 15px -93px;
 }
 
-.register .header .serverMenu li .x3 {
+.register .header .serverMenu .xt_li:nth-child(3) {
   background: url(../images/01/icon2.png) no-repeat 15px -240px;
 }
 
-.register .header .serverMenu li .x3:hover {
+.register .header .serverMenu .xt_li:nth-child(3):hover {
   background: url(../images/01/icon2.png) no-repeat 15px -190px;
 }
 
-.register .header .serverMenu li .x4 {
+.register .header .serverMenu .xt_li:nth-child(4) {
   background: url(../images/01/icon2.png) no-repeat 15px -341px;
 }
 
-.register .header .serverMenu li .x4:hover {
+.register .header .serverMenu .xt_li:nth-child(4):hover {
   background: url(../images/01/icon2.png) no-repeat 15px -291px;
 }
 
-.register .header .serverMenu li .x5 {
+.register .header .serverMenu .xt_li:nth-child(5) {
   background: url(../images/01/icon2.png) no-repeat 15px -441px;
 }
 
-.register .header .serverMenu li .x5:hover {
+.register .header .serverMenu .xt_li:nth-child(5):hover {
   background: url(../images/01/icon2.png) no-repeat 15px -391px;
 }
 
-.register .header .serverMenu li .x6 {
+.register .header .serverMenu .xt_li:nth-child(6) {
   background: url(../images/01/icon2.png) no-repeat 15px -542px;
 }
 
-.register .header .serverMenu li .x6:hover {
+.register .header .serverMenu .xt_li:nth-child(6):hover {
   background: url(../images/01/icon2.png) no-repeat 15px -492px;
 }
 
-.register .header .serverMenu li .x7 {
+.register .header .serverMenu .xt_li:nth-child(7) {
   background: url(../images/01/icon2.png) no-repeat 15px -641px;
 }
 
-.register .header .serverMenu li .x7:hover {
+.register .header .serverMenu .xt_li:nth-child(7):hover {
   background: url(../images/01/icon2.png) no-repeat 15px -591px;
 }
 
-.register .header .serverMenu li .x8 {
+.register .header .serverMenu .xt_li:nth-child(8) {
   background: url(../images/01/icon2.png) no-repeat 15px -741px;
 }
 
-.register .header .serverMenu li .x8:hover {
+.register .header .serverMenu .xt_li:nth-child(8):hover {
   background: url(../images/01/icon2.png) no-repeat 15px -691px;
 }
 

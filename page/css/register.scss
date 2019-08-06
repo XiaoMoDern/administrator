@@ -50,6 +50,11 @@
             }
         }
 
+
+
+
+
+
         .sideNavRight {
             float: right;
 
@@ -269,32 +274,99 @@
             height: 400px;
             background: url(../images/01/类目bg_1.png);
             display: none;
-            position: absolute;
-            z-index: 10;
 
+            .xt {
+                background: #fff;
+            }
 
-            li {
+            .xq-block {
+                display: block;
+            }
+
+            .xt_li {
                 height: 50px;
                 width: 100%;
 
-                &:hover {
-                    background: #fff;
+
+
+                // -----------
+
+                .inServerMenuB {
+                    display: none;
                 }
+
+                .xq-block {
+                    display: block;
+                }
+
+                .inServerMenuB {
+                    opacity: .9;
+                    width: 607px;
+                    height: 396px;
+                    border-top: #ccc solid 1px;
+                    border-bottom: #ccc solid 1px;
+                    border-right: #ccc solid 1px;
+                    background: #fff;
+                    position: absolute;
+                    top: 157px;
+                    left: 265px;
+                    padding: 20px 20px;
+                    box-sizing: border-box;
+                    z-index: 20;
+
+
+
+
+
+                    li {
+                        margin-bottom: 12px;
+
+                        h3 {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: #333;
+                            padding-bottom: 2px;
+                        }
+
+                        a {
+                            font-size: 12px;
+                            padding-right: 2px;
+                            line-height: 12px;
+                            color: #666;
+                            margin-right: 8px;
+                        }
+
+
+
+
+                    }
+
+                }
+
+                // ----------------
 
                 &:hover a {
                     color: #FF3D3B;
                 }
 
-                a {
+                .nin {
                     font-size: 14px;
                     color: #fff;
                     line-height: 50px;
                     text-align: center;
                     display: block;
                     width: 100%;
+                    height: 100%;
+
+
+                    font {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
-                .x1 {
+                &:nth-child(1) {
                     background: url(../images/01/icon2.png)no-repeat 15px -43px;
 
                     &:hover {
@@ -302,7 +374,7 @@
                     }
                 }
 
-                .x2 {
+                &:nth-child(2) {
                     background: url(../images/01/icon2.png)no-repeat 15px -143px;
 
                     &:hover {
@@ -310,7 +382,7 @@
                     }
                 }
 
-                .x3 {
+                &:nth-child(3) {
                     background: url(../images/01/icon2.png)no-repeat 15px -240px;
 
                     &:hover {
@@ -318,7 +390,7 @@
                     }
                 }
 
-                .x4 {
+                &:nth-child(4) {
                     background: url(../images/01/icon2.png)no-repeat 15px -341px;
 
                     &:hover {
@@ -326,7 +398,7 @@
                     }
                 }
 
-                .x5 {
+                &:nth-child(5) {
                     background: url(../images/01/icon2.png)no-repeat 15px -441px;
 
                     &:hover {
@@ -334,7 +406,7 @@
                     }
                 }
 
-                .x6 {
+                &:nth-child(6) {
                     background: url(../images/01/icon2.png)no-repeat 15px -542px;
 
                     &:hover {
@@ -342,7 +414,7 @@
                     }
                 }
 
-                .x7 {
+                &:nth-child(7) {
                     background: url(../images/01/icon2.png)no-repeat 15px -641px;
 
                     &:hover {
@@ -350,7 +422,7 @@
                     }
                 }
 
-                .x8 {
+                &:nth-child(8) {
                     background: url(../images/01/icon2.png)no-repeat 15px -741px;
 
                     &:hover {
@@ -358,6 +430,7 @@
                     }
                 }
             }
+
         }
 
         .inServerMenuList {

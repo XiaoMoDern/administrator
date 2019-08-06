@@ -261,104 +261,20 @@
   background: #fff;
 }
 
-#Mose .header .serverMenu li {
+#Mose .header .serverMenu .xt_li {
   height: 50px;
   width: 100%;
 }
 
-#Mose .header .serverMenu li:hover a {
-  color: #FF3D3B;
-}
-
-#Mose .header .serverMenu li a {
-  font-size: 14px;
-  color: #fff;
-  line-height: 50px;
-  text-align: center;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-#Mose .header .serverMenu li a font {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-#Mose .header .serverMenu li .x1 {
-  background: url(../images/01/icon2.png) no-repeat 15px -43px;
-}
-
-#Mose .header .serverMenu li .x1:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px 7px;
-}
-
-#Mose .header .serverMenu li .x2 {
-  background: url(../images/01/icon2.png) no-repeat 15px -143px;
-}
-
-#Mose .header .serverMenu li .x2:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px -93px;
-}
-
-#Mose .header .serverMenu li .x3 {
-  background: url(../images/01/icon2.png) no-repeat 15px -240px;
-}
-
-#Mose .header .serverMenu li .x3:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px -190px;
-}
-
-#Mose .header .serverMenu li .x4 {
-  background: url(../images/01/icon2.png) no-repeat 15px -341px;
-}
-
-#Mose .header .serverMenu li .x4:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px -291px;
-}
-
-#Mose .header .serverMenu li .x5 {
-  background: url(../images/01/icon2.png) no-repeat 15px -441px;
-}
-
-#Mose .header .serverMenu li .x5:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px -391px;
-}
-
-#Mose .header .serverMenu li .x6 {
-  background: url(../images/01/icon2.png) no-repeat 15px -542px;
-}
-
-#Mose .header .serverMenu li .x6:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px -492px;
-}
-
-#Mose .header .serverMenu li .x7 {
-  background: url(../images/01/icon2.png) no-repeat 15px -641px;
-}
-
-#Mose .header .serverMenu li .x7:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px -591px;
-}
-
-#Mose .header .serverMenu li .x8 {
-  background: url(../images/01/icon2.png) no-repeat 15px -741px;
-}
-
-#Mose .header .serverMenu li .x8:hover {
-  background: url(../images/01/icon2.png) no-repeat 15px -691px;
-}
-
-#Mose .header .inServerMenuList .inServerMenuB {
+#Mose .header .serverMenu .xt_li .inServerMenuB {
   display: none;
 }
 
-#Mose .header .inServerMenuList .xq-block {
+#Mose .header .serverMenu .xt_li .xq-block {
   display: block;
 }
 
-#Mose .header .inServerMenuList .inServerMenuB {
+#Mose .header .serverMenu .xt_li .inServerMenuB {
   opacity: .9;
   width: 607px;
   height: 396px;
@@ -374,23 +290,107 @@
   z-index: 20;
 }
 
-#Mose .header .inServerMenuList .inServerMenuB li {
+#Mose .header .serverMenu .xt_li .inServerMenuB li {
   margin-bottom: 12px;
 }
 
-#Mose .header .inServerMenuList .inServerMenuB li h3 {
+#Mose .header .serverMenu .xt_li .inServerMenuB li h3 {
   font-size: 14px;
   font-weight: bold;
   color: #333;
   padding-bottom: 2px;
 }
 
-#Mose .header .inServerMenuList .inServerMenuB li a {
+#Mose .header .serverMenu .xt_li .inServerMenuB li a {
   font-size: 12px;
   padding-right: 2px;
   line-height: 12px;
   color: #666;
   margin-right: 8px;
+}
+
+#Mose .header .serverMenu .xt_li:hover a {
+  color: #FF3D3B;
+}
+
+#Mose .header .serverMenu .xt_li .nin {
+  font-size: 14px;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#Mose .header .serverMenu .xt_li .nin font {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(1) {
+  background: url(../images/01/icon2.png) no-repeat 15px -43px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(1):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px 7px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(2) {
+  background: url(../images/01/icon2.png) no-repeat 15px -143px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(2):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px -93px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(3) {
+  background: url(../images/01/icon2.png) no-repeat 15px -240px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(3):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px -190px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(4) {
+  background: url(../images/01/icon2.png) no-repeat 15px -341px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(4):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px -291px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(5) {
+  background: url(../images/01/icon2.png) no-repeat 15px -441px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(5):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px -391px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(6) {
+  background: url(../images/01/icon2.png) no-repeat 15px -542px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(6):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px -492px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(7) {
+  background: url(../images/01/icon2.png) no-repeat 15px -641px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(7):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px -591px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(8) {
+  background: url(../images/01/icon2.png) no-repeat 15px -741px;
+}
+
+#Mose .header .serverMenu .xt_li:nth-child(8):hover {
+  background: url(../images/01/icon2.png) no-repeat 15px -691px;
 }
 
 #Mose .main {
@@ -541,20 +541,55 @@
   color: #f02e4b;
 }
 
+#Mose .main .floor .floor_1 .f_title .mQ {
+  float: right;
+}
+
+#Mose .main .floor .floor_1 .f_title .mQ li {
+  width: 108px;
+  background: #fff;
+  line-height: 38px;
+  float: left;
+  text-align: center;
+}
+
+#Mose .main .floor .floor_1 .f_title .mQ li:hover {
+  border-left: solid 2px #0099cc;
+  border-right: solid 2px #0099cc;
+  border-top: solid 2px #0099cc;
+}
+
 #Mose .main .floor .floor_1 .f_con {
   width: 100%;
   height: 448px;
   border-top: 2px solid #ef0a4a;
   margin-top: 5px;
+  position: relative;
 }
 
 #Mose .main .floor .floor_1 .f_con .f_con_l {
   float: left;
   width: 299px;
   height: 448px;
-  position: relative;
   overflow: hidden;
   background: #ccc;
+}
+
+#Mose .main .floor .floor_1 .f_con .f_con_l .swiper-wrapper {
+  width: 100%;
+}
+
+#Mose .main .floor .floor_1 .f_con a {
+  display: inline-block;
+  width: 299px;
+}
+
+#Mose .main .floor .floor_1 .f_con .f_con_r {
+  width: 910px;
+  background: #ccc;
+  position: absolute;
+  right: -10px;
+  top: 0px;
 }
 
 #Mose .main .floor .floor_1 .f_con .f_con_r li {
