@@ -98,8 +98,19 @@ $(function () {
 
 
     // ---------------------------------------
-    // 图形验证码
+
+    /* 图形验证码 */
     let imgCodeText = "";
+    /* 短信验证码 */
+    var msgText = "";
+    /* 密码 */
+    let passwordAText = "";
+    let passwordBText = "";
+    /* 用户名 */
+    let usernameText = "";
+    /* 手机号码 */
+    let phoneText = "";
+
 
     (new Captcha({
         fontSize: 30,
@@ -120,23 +131,91 @@ $(function () {
 
     // 获取标签
     let tp = $(".tp");
-    console.log(tp);
-
+    let HY = $(".HY");
+    let msgCode = $("#msgCode")
     var phone = $(".phone");
     let passwdrdA = $('#passwdrdA');
     let passwdrdB = $("#passwdrdB");
+    let imageCode = $("imageCode");
+    let tu = $(".tu")
     let htnl = "x"
     let htvl = "√"
 
 
+    function formatterDateTime() {
+        var date = new Date()
+        var month = date.getMonth() + 1
+        var datetime = date.getFullYear() +
+            "" // "年"
+            +
+            (month >= 10 ? month : "0" + month) +
+            "" // "月"
+            +
+            (date.getDate() < 10 ? "0" + date.getDate() : date
+                .getDate()) +
+            "" +
+            (date.getHours() < 10 ? "0" + date.getHours() : date
+                .getHours()) +
+            "" +
+            (date.getMinutes() < 10 ? "0" + date.getMinutes() : date
+                .getMinutes()) +
+            "" +
+            (date.getSeconds() < 10 ? "0" + date.getSeconds() : date
+                .getSeconds());
+        return datetime;
+    }
 
 
+    HY.click(function () {
+        msgCodeText = parseInt(Math.random() * 1000000);
+        /* 检查手机号码是否正确 */
+        var text = $.trim(phone.val());
+        if (text.length != 0 && regPhone.test(text)) {
 
+            /* 发送网络请求：发短信 */
+            $.ajax({
+                type: 'post',
+                url: 'http://route.showapi.com/28-1',
+                dataType: 'json',
+                data: {
+                    "showapi_timestamp": formatterDateTime(),
+                    "showapi_appid": '101997', //这里需要改成自己的appid
+                    "showapi_sign": '01dcd0c0aeab40339708b6e767e0c1a3', //这里需要改成自己的应用的密钥secret
+                    "mobile": text,
+                    "content": `{"code":${msgCodeText},"minute":"3","comName":"摩西摩西购物网"}`,
+                    "tNum": "T150606060601",
+                    "big_msg": ""
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    alert("操作失败!");
+                },
+                success: function (result) {
+                    console.log(result) //console变量在ie低版本下不能用
+                    // alert(result.showapi_res_code)
+                }
+            });
 
+            var count = 60;
+            var timer = setInterval(function () {
+                count--;
+                if (count <= 0) {
+                    HY.html("发送短信验证码");
+                    clearInterval(timer);
+                } else {
+                    HY.html("重试 " + count + "s");
+                }
+            }, 1000);
+        } else {
+            alert("手机号码不正确");
+        }
+
+        /* 开启倒计时：当前的标签不可点击 */
+    });
     // 手机号码验证
     phone.blur(function (e) {
         // 清空格
         let text = $.trim($(this).val());
+        phoneText = text;
         // 判断内容是否为空
         if (text.length == 0) {
             // 添加样式
@@ -151,8 +230,24 @@ $(function () {
             $(".h1").html(htvl)
             $(".h1").css("display", "block")
         }
+    });
 
+    tu.blur(function (e) {
+        let text = $.trim($(this).val());
+        msgText = text;
 
+        if (text.length == 0) {
+            alert("短信验证码不能为空!")
+            $(".h5").html(htnl)
+            $(".h5").css("display", "block")
+        } else if (text != msgCodeText) {
+            $(".h5").html(htnl)
+            $(".h5").css("display", "block")
+        } else {
+            $(".h5").html(htvl)
+            $(".h5").css("display", "block")
+
+        }
     });
     // 密码验证
     let passwdrdAtext = "";
@@ -182,6 +277,7 @@ $(function () {
     passwdrdB.blur(function (e) {
         // 清空格
         let text = $.trim($(this).val());
+        passwordBText = text;
         console.log(text);
 
         // 判断内容是否为空
@@ -209,9 +305,9 @@ $(function () {
             // 添加样式
             // alert("手机号码不能为空！")
             $(".h4").html(htnl)
-            $(".h4").css("display", "block")
+            $(".h4").css("display", "none")
         } else if (imgCodeText.toLowerCase() != text.toLowerCase()) {
-            alert("验证码不正确！")
+            // alert("验证码不正确！")
             $(".h4").html(htnl)
             $(".h4").css("display", "block")
         } else {
@@ -219,7 +315,66 @@ $(function () {
             $(".h4").css("display", "block")
         }
 
-
     });
 
+
+    /* 验证码处理 */
+    (new Captcha({
+        fontSize: 30
+    })).draw(document.querySelector('#captcha'), r => {
+        console.log(r, '验证码1');
+        imgCodeText = r;
+        /* 自动触发标签失去焦点的事件 */
+        tp.trigger("blur");
+    });
+
+
+
+
+
+    // ----------------
+    $("#registerBtn").click(function () {
+        let isCheck = $("#protocol").is(":checked");
+        if (!isCheck) {
+            alert("请阅读并同意用户协议");
+            return;
+        }
+
+        usernameText = "jiji";
+        phoneText = "18689429886";
+        msgText = "111";
+        imgCodeText = "222";
+        passwordBText = passwordAText = "33333333";
+
+        // console.log($(".form-group-error").length, $(".form-group-error"));
+        // if (usernameText.length != 0 &&
+        //     phoneText.length != 0 &&
+        //     msgText.length != 0 &&
+        //     passwordAText.length != 0 &&
+        //     passwordBText.length != 0 &&
+        //     imgCodeText.length != 0 && $(".form-group-error").length == 0
+        // ) 
+        {
+
+            $.ajax({
+                type: "post",
+                url: "../php/register.phps",
+                dataType: "json",
+                data: `username=${usernameText}&password=${passwordAText}&phone=${phoneText}`,
+                // dataType: "dataType",
+                success: function (response) {
+                    console.log(response);
+                    /* 先检查请求的结果，然后做出对应的处理 */
+                    if (response.status == "success") {
+                        alert(response.msg);
+                        /* 跳转到登录页面 */
+                        window.location.href = "http://www.baidu.com"
+                    } else {
+                        alert(response.msg);
+                    }
+                }
+            });
+        }
+
+    })
 })

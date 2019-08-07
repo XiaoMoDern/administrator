@@ -607,9 +607,15 @@
 }
 
 .register .login .register_R .mailbox .mailbox_to .HY {
+  margin-left: 10px;
+  display: inline-block;
+  padding: 6px;
+  width: 100px;
   font-size: 12px;
-  height: 30px;
+  height: 18px;
   text-align: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
 }
 
 .register .login .register_R .mailbox .mailbox_to span {
@@ -636,6 +642,10 @@
   color: #666;
   font-size: 12px;
   margin-left: 165px;
+}
+
+.register .login .register_R .mailbox .mailbox_to .tu {
+  width: 122px;
 }
 
 .register .login .register_R .mailbox .mailbox_to .tp {

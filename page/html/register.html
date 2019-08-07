@@ -111,7 +111,7 @@
                         <!--  -->
                         <div class="mailbox_to">
                             <label>图片验证码: </label>
-                            <input type="text" class="tp">
+                            <input type="text" class="tp" id="imageCode">
                             <canvas width="160px" height="45px" id="captcha"></canvas>
                             <span class="pass h4">√</span>
                         </div>
@@ -119,11 +119,13 @@
                         <!--  -->
                         <div class="mailbox_to">
                             <label>请输入验证码:</label>
-                            <input type="text" class="tp">
+                            <input type="text" class="tu" id="msgCodew">
                             <bottom class="HY">获取短信验证码</bottom>
-
                             <p>请输入你所收到的手机验证码。</p>
+                            <span class="pass h5">√</span>
                         </div>
+                        <!--  -->
+                        <!--  -->
                         <div class="mailbox_to">
                             <label>从何处得知我们网站：</label>
                             <input type="text">
@@ -138,8 +140,8 @@
                                 <a href="" target="_blank">《用户协议》</a>
                             </div>
                         </div>
-                        <div class="form-item agree"><span class="label"></span> <button
-                                class="button register-btn">注册</button></div>
+                        <div class="form-item agree"><span class="label"></span> <button class="button register-btn"
+                                id="registerBtn">注册</button></div>
 
                         <!--  -->
                         <div class="phone"></div>

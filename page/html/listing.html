@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../plug-in/jquery-3.4.1.js"></script>
+    <script src="../js/listing.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/listing.css">
+</head>
+
+<body>
+    <div id="listing">
+        <!-- 顶部 -->
+        <div class="header-top">
+        </div>
+
+        <!-- 主要内容 -->
+
+        <div class="main">
+            <div class="content">
+                <div class="category-path">
+                </div>
+                <!-- 左边内容 -->
+                <div style="width: 210px; padding-bottom: 50px; float: left;">
+                    <div class="hotProCategorySales">
+                        <h2 class="hd">热销商品</h2>
+                        <ul class="inhotProCategorySales">
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list1.jpg" alt=""></a>
+                                <a href="" class="depict">山本汉方 大麦若叶粉末100%青汁 3g*44袋</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list2.jpg" alt=""></a>
+                                <a href="" class="depict">【包邮】【保税区闪送】大王/Goo.n 纸尿裤L54 适合9~14kg宝宝</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list3.png" alt=""></a>
+                                <a href="" class="depict">【包邮】【保税区闪送】乐而雅/Laurier 日用瞬吸超薄1mm护翼型卫生巾25cm*19片</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list4.jpg" alt=""></a>
+                                <a href="" class="depict">【包邮】【保税区闪送】花王妙而舒/Merries 拉拉裤纸尿裤PL44片 学步裤9-14kg瞬爽透气 增量装WTJ</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list5.jpg" alt=""></a>
+                                <a href="" class="depict">【包邮】【保税区闪送】狮王/LION 面包超人木糖醇儿童牙膏 哈密瓜味 40g</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list6.jpg" alt=""></a>
+                                <a href="" class="depict">生酵素/SORRISO 222种天然植物水果谷物浓缩精华 60粒/60日份 2包装</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list7.jpg" alt=""></a>
+                                <a href="" class="depict">【包邮】【保税区闪送】丝蓓绮/TSUBAKI 炫魅滋养洗护系列 洗发水 550ml</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list8.jpg" alt=""></a>
+                                <a href="" class="depict">【保税区闪送】日本花王纸尿裤 M64 64片WTJ</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list9.jpg" alt=""></a>
+                                <a href="" class="depict">【包邮】【保税区闪送】玉之肌/TOMANOHADA 无硅栀子花皂125g</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                            <li class="inhotProCategorySales">
+                                <a href=""> <img src="../images/01/list10.jpg" alt=""></a>
+                                <a href="" class="depict">【包邮】【保税区闪送】丝蓓绮/TSUBAKI 炫魅滋养洗护系列 洗发水 550ml</a>
+                                <span class="price ">78.39</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 右边内容 -->
+                <div style="width: 970px; padding-bottom: 25px; float: right; ">
+                    <div>
+                        <div style="border: solid 1px #ddd; margin-top: 8px; padding-left: 8px;overflow: hidden;">
+                            <div class="category-sort">
+                                <span>排序：</span>
+                                <ul>
+                                    <li>默认</li>
+                                    <li class="asc">销量
+                                        <b></b>
+                                    </li>
+                                    <li class="desc">销量
+                                        <b></b>
+                                    </li>
+                                </ul>
+                                <!-- <dd>
+                                    <a href="">默认</a>
+                                </dd>
+                                <dd class="asc">
+                                    <a href="">销量</a>
+                                    <b></b>
+                                </dd>
+                                <dd class="desc">
+                                    <a href="">销量</a>
+                                    <b></b>
+                                </dd> -->
+                            </div>
+                            <dl class="price-region">
+                                <dt>价格：</dt>
+                                <dd>
+                                    <input id="category-param-minprice" type="text" value="">(元) 至
+                                    <input id="category-param-maxprice" type="text" value="">(元)
+                                </dd>
+                                <dd>
+                                    <a class="btn" href="#" id="btn2">确定</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div>
+                        <div class="m-products-show">
+                            <div class="select-list">
+                                <!-- <div class="sel-shop-iteam ">
+                                    <div class="s-pic">
+                                        <a href=""> <img src="../images/01/xc1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="cart-price">
+                                        <strong>
+                                            181.12元
+                                        </strong>
+                                        <strong>
+
+                                        </strong>
+                                    </div>
+                                    <div class="s-dec">
+                                        <a href="">【日本直邮】不二家/ウェブサイト ペコポコ巧克力24克×12个</a>
+                                    </div>
+                                </div>
+
+                                <div class="sel-shop-iteam ">
+                                    <div class="s-pic">
+                                        <a href=""> <img src="../images/01/xc1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="cart-price">
+                                        <strong class="price">
+                                            181.12元
+                                        </strong>
+                                        <strong>
+
+                                        </strong>
+                                    </div>
+                                    <div class="s-dec">
+                                        <a href="">【日本直邮】不二家/ウェブサイト ペコポコ巧克力24克×12个</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="pager">
+                        <div class="con">
+                            <a class="last">上一页</a>
+                            <div class="items"><a class="item-cur" href="">1</a><a class="item" href="">2</a>
+                            </div><a class="next" href="">下一页</a>
+                            <a class="total">共2页 </a>
+                            <a class="to">跳转到第<input type="text">页</a>
+                            <a href="javascript:;" class="ensure">确定</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer-bottom">
+        </div>
+    </div>
+</body>
+
+</html>
