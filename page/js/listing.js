@@ -12,13 +12,13 @@ $(function () {
     // 主要内容
 
     let list = $(".select-list");
-
+    let items = $("items");
     let iPage = 1;
     let num = 40;
+    // let pages = 0;
 
 
     function init() {
-
         $.ajax({
             type: 'get',
             url: '../php/listing.php',
@@ -26,7 +26,7 @@ $(function () {
             success: str => {
                 // console.log(str);
                 var src = JSON.parse(str);
-                console.log(src);
+                // console.log(src);
                 var res = src.data.map(function (ele) {
                     // console.log(ele);
 
@@ -55,18 +55,40 @@ $(function () {
 
 
 
+                // 生成页码
+                let pages = Math.ceil(src.pages / src.num)
+                let pageBtns = "";
+                for (let i = 0; i < pages; i++) {
+                    pageBtns += ` <li class="item-cur" href="">${i + 1}</li> `;
+
+                }
+                $(".items").html(pageBtns);
+                $(".items").children().eq(iPage - 1).addClass("active");
             }
-        })
-
-        $(".category-sort li").click(function () {
-            console.log($(this).index());
-
         })
     }
     init();
+    //3.点击页码，能够按需加载新一页数据过来渲染；事件委托实现事件绑定
+    $(".items").on("click", $("li"), function (ev) {
+        iPage = ev.target.innerHTML;
+        init(); //调取最新的数据渲染到页面
+    })
 
 
-
+    $('.next').click(function () { //下一页
+        iPage++;
+        if (iPage > num) {
+            iPage = num;
+        }
+        init();
+    });
+    $('.last').click(function () { //上一页
+        iPage--;
+        if (iPage > num) {
+            iPage = 1;
+        }
+        init();
+    });
 
 
     // 引入底部

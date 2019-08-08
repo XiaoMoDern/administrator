@@ -695,6 +695,10 @@
   margin-right: 30px;
 }
 
+#listing .main .pager .con .items .active {
+  background-color: #ccc;
+}
+
 #listing .main .pager .con .items .item-cur {
   float: left;
   margin-right: 10px;
@@ -703,8 +707,11 @@
   padding-right: 15px;
   height: 25px;
   line-height: 25px;
+  cursor: pointer;
+}
+
+#listing .main .pager .con .items .item-cur:hover {
   background-color: #ccc;
-  color: #FFFFFF;
 }
 
 #listing .main .pager .con .items .item {

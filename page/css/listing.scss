@@ -754,6 +754,10 @@
                     float: left;
                     margin-right: 30px;
 
+                    .active {
+                        background-color: #ccc;
+                    }
+
 
 
                     .item-cur {
@@ -764,8 +768,11 @@
                         padding-right: 15px;
                         height: 25px;
                         line-height: 25px;
-                        background-color: #ccc;
-                        color: #FFFFFF;
+                        cursor: pointer;
+                        
+                        &:hover {
+                            background-color: #ccc;
+                        }
                     }
 
                     .item {
