@@ -200,12 +200,17 @@
 
 #listing .header .nav .navAll {
   width: 190px;
-  height: 34px;
-  font-size: 12px;
+  overflow: hidden;
   color: #fff;
-  background: #ff3d3b url(../images/01/08.png) no-repeat 152px 14px;
   float: left;
+}
+
+#listing .header .nav .navAll .navA {
+  width: 190px;
+  height: 34px;
   text-align: center;
+  background: #ff3d3b url(../images/01/08.png) no-repeat 152px 14px;
+  font-size: 12px;
   line-height: 34px;
 }
 

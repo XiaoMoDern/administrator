@@ -1,4 +1,4 @@
-#listing {
+#particulars {
     .content {
         width: 1200px;
         // background: #ccc;
@@ -119,7 +119,6 @@
             }
         }
     }
-
 
     // 头部和导航
     .header {
@@ -284,8 +283,13 @@
             background: url(../images/01/类目bg_1.png);
             display: none;
 
+
             .xt {
                 background: #fff;
+            }
+
+            .hide {
+                display: none;
             }
 
             .xq-block {
@@ -477,372 +481,149 @@
     }
 
 
-    // 主要内容
+
+    // 主要内容部分
 
     .main {
-        width: 100%;
+        height: 1000px;
 
-        .category-path {
-            padding: 8px 5px 8px 5px;
-            line-height: 18px;
+        .hyb-warproot-nav {
+            width: 100%;
+            padding: 10px 0 0 0;
+            margin: auto;
             clear: both;
-        }
 
-        .hotProCategorySales {
-            width: 208px;
-            height: auto;
-            border: solid 1px #CCCCCC;
+            .hyb-root-nav {
+                width: 1200px;
+                margin: auto;
+                clear: both;
 
-            .hd {
-                height: 36px;
-                line-height: 36px;
-                padding: 0 14px;
-                border-bottom: 1px solid #CCCCCC;
-                font-size: 14px;
-                font-weight: 400;
-                background-color: #fafafa;
-                margin: 0;
-            }
+                strong {
+                    font-size: 24px;
 
-            .inhotProCategorySales {
-                width: 208px;
-                padding: 0 14px;
-                overflow: hidden;
-                margin: 0 auto;
-                padding-left: 0;
-
-                .inhotProCategorySales {
-                    padding: 10px 0 0 0;
-                    width: 208px;
-
-                    a img {
-                        padding: 0 54px;
-                        height: 100px;
-                        width: 100px;
-                        margin: 0 auto;
-                        margin-bottom: 6px;
+                    a {
+                        color: #000000;
                     }
+                }
 
-                    .depict {
-                        font: 12px/1.5 '\5fae\8f6f\96c5\9ed1', 'Lucida Grande', Arial, '\5b8b\4f53';
-                        padding: 0 14px;
-                        display: block;
-                        height: 36px;
-                        margin: 0;
-                        line-height: 18px;
-                        color: #666;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-
-                    .price {
-                        display: block;
-                        margin: 6px 14px;
-                        color: #F86F76;
-                        padding-bottom: 16px;
-                        border-bottom: 1px solid #eee;
+                span {
+                    a {
+                        color: #525252;
+                        font: 12px/1.5 "微软雅黑", tahoma, arial, \5b8b\4f53;
                     }
                 }
             }
-
         }
 
-        .category-sort {
-            float: left;
-            width: 260px;
+        .hyb-detail-box {
+            width: 100%;
+            margin: auto;
+            clear: both;
 
-            span {
-                font: 12px/1.5 "微软雅黑", tahoma, arial, \5b8b\4f53;
-                float: left;
-                display: inline-block;
-                padding: 5px 2px 8px 3px;
-                line-height: 25px;
-            }
+            .hyb-dinfo-box {
+                width: 1200px;
+                margin: 18px auto auto auto;
+                clear: both;
 
-            li {
-
-                float: left;
-                font: 12px/1.5 "微软雅黑", tahoma, arial, \5b8b\4f53;
-                display: block;
-                line-height: 25px;
-                padding: 0px 10px 0px 10px;
-                border: solid 1px #ddd;
-                margin-top: 6px;
-                margin-right: 5px;
-                cursor: pointer;
-
-
-            }
-
-            .asc {
-                position: relative;
-                background: #F64900;
-                border: 1px solid #E4393C;
-                font-weight: 700;
-                padding-right: 18px;
-                color: #fff;
-
-
-                b {
-                    font-size: 0px;
-                    height: 11px;
-                    overflow: hidden;
-                    position: absolute;
-                    right: 6px;
-                    top: 7px;
-                    width: 9px;
-                    background-image: url(../images/01/qo.png);
-                    background-repeat: no-repeat;
-                    background-position: 0px -12px;
-                }
-            }
-
-            .desc {
-                position: relative;
-                color: #fff;
-                background: #F64900;
-                border: 1px solid #E4393C;
-                font-weight: 700;
-                padding-right: 18px;
-
-                b {
-                    font-size: 0px;
-                    height: 11px;
-                    overflow: hidden;
-                    position: absolute;
-                    right: 6px;
-                    top: 7px;
-                    width: 9px;
-                    background-image: url(../images/01/qo.png);
-                    background-repeat: no-repeat;
-                }
-            }
-
-
-        }
-
-        .price-region {
-            width: 350px;
-            margin-left: 25px;
-            float: left;
-
-            dt {
-                font: 12px/1.5 "微软雅黑", tahoma, arial, \5b8b\4f53;
-                float: left;
-                display: inline-block;
-                padding: 5px 2px 8px 3px;
-                line-height: 25px;
-            }
-
-            dd {
-
-                float: left;
-                display: inline-block;
-                padding: 5px 2px 8px 3px;
-                line-height: 25px;
-
-                a {
-                    font: 12px/1.5 "微软雅黑", tahoma, arial, \5b8b\4f53;
-                    display: block;
-                    line-height: 25px;
-                    padding: 0px 10px 0px 10px;
-                    border: solid 1px #ddd;
-                }
-
-                input {
-                    width: 40px;
-                    border: solid 1px #ddd;
-                    padding: 0;
-                    margin: 0;
-                    line-height: 20px;
-                    height: 20px;
-                    text-align: center;
-                }
-
-            }
-        }
-
-
-        .m-products-show {
-            .select-list {
-                overflow: hidden;
-
-                .sel-shop-iteam {
-                    position: relative;
-                    overflow: visible;
-                    width: 223px;
-                    height: 250px;
-                    padding-bottom: 10px;
-                    border-radius: 10px;
-                    border: solid 4px #fff;
-                    cursor: pointer;
+                .hyb-dinfo-box-left {
+                    width: 350px;
                     float: left;
-                    margin: 10px 0px 0px 9px;
+                    position: relative;
 
+                    .hyb-p-pic {
+                        width: 350px;
+                        height: 350px;
+                        position: relative;
 
-                    &:hover {
-                        border-color: rgb(221, 221, 221)
+                        img {
+                            max-width: 350px;
+                            max-height: 350px;
+                            padding: 0;
+                            border: 0;
+                        }
                     }
 
-                    .s-pic {
-                        text-align: center;
-                        height: 165px;
-                        z-index: 1;
+                    .hyb-p-list {
+                        width: 305px;
+                        height: 60px;
+                        margin: 32px auto auto auto;
                         overflow: hidden;
-                        margin-top: 5px;
-                        vertical-align: middle;
 
-                        a {
-                            height: 100%;
-                            border: none;
+                        ul {
                             display: block;
+                            float: left;
+                            width: 90000px;
 
-                            img {
-                                width: 158px;
-                                height: 158px;
-                                vertical-align: middle;
+                            li {
+                                display: block;
+                                width: 61px;
+                                height: 60px;
+                                float: left;
+                                text-align: center;
+                                cursor: pointer;
+
+                                img {
+                                    width: 55px;
+                                    height: 55px;
+                                    display: inline-block;
+                                    border: 2px solid #f86f76;
+                                    padding: 0px;
+                                }
                             }
                         }
                     }
 
-                    .cart-price {
-                        text-align: center;
-                        line-height: 18px;
-                        height: 22px;
-                        margin: 0px 0px 0px 0px;
 
-                        .price {
-                            width: auto;
-                            float: none;
-                            line-height: 18px;
-                            font-size: 14px;
-                            font-weight: bold;
-                            margin-left: 0px;
-                            color: #990033;
-                        }
+
+                    .hyb-pic-leftBtn {
+                        display: block;
+                        width: 17px;
+                        height: 55px;
+                        position: absolute;
+                        background-image: url(../images/02/tpr2.png);
+                        background-repeat: no-repeat;
+                        left: 3px;
+                        bottom: 3px;
                     }
 
-                    .s-dec {
-                        font: 12px/1.5 "微软雅黑", tahoma, arial, \5b8b\4f53;
+
+                    .hyb-pic-rightBtn {
+                        display: block;
+                        width: 17px;
+                        height: 55px;
+                        position: absolute;
+                        background: url(../images/02/tpr2.png)no-repeat -30px 0px;
+                        right: 0px;
+                        bottom: 3px;
                     }
+
+                }
+
+                .hyb-dinfo-box-center {
+                    width: 558px;
+                    float: left;
+                    margin-left: 25px;
+                    position: relative;
+
+                    h1 {
+                        font-size: 16px;
+                        color: #666666;
+                        font-weight: bold;
+                        padding-bottom: 9px;
+                        border-bottom: 1px solid #fa8f94;
+                    }
+
                 }
 
             }
+
+
         }
 
-        .pager {
-            width: 97%;
-            margin-right: 3%;
-            float: left;
-            font-size: 12px;
-            color: #999;
-            clear: both;
-            margin-top: 40px;
-            margin-bottom: 10px;
 
-            a {
-                color: #666;
-            }
-
-            .con {
-                float: right;
-
-                .last {
-                    float: left;
-                    border: #CCCCCC 1px solid;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                    height: 25px;
-                    line-height: 25px;
-                    margin-right: 15px;
-                    background-color: #FFFFFF;
-                }
-
-                .items {
-                    float: left;
-                    margin-right: 30px;
-
-                    .active {
-                        background-color: #ccc;
-                    }
-
-
-
-                    .item-cur {
-                        float: left;
-                        margin-right: 10px;
-                        border: #CCCCCC 1px solid;
-                        padding-left: 15px;
-                        padding-right: 15px;
-                        height: 25px;
-                        line-height: 25px;
-                        cursor: pointer;
-
-                        &:hover {
-                            background-color: #ccc;
-                        }
-                    }
-
-                    .item {
-                        float: left;
-                        margin-right: 10px;
-                        border: #CCCCCC 1px solid;
-                        padding-left: 15px;
-                        padding-right: 15px;
-                        height: 25px;
-                        line-height: 25px;
-                        background-color: #FFFFFF;
-                    }
-                }
-
-                .next {
-                    float: left;
-                    border: #CCCCCC 1px solid;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                    height: 25px;
-                    line-height: 25px;
-                    background-color: #FFFFFF;
-                }
-
-                .total {
-                    float: left;
-                    height: 25px;
-                    line-height: 25px;
-                    margin-right: 50px;
-                    padding-left: 10px;
-                }
-
-                .to {
-                    float: left;
-                    height: 25px;
-                    line-height: 25px;
-                    margin-right: 10px;
-                    padding-left: 10px;
-
-                    input {
-                        border: #ccc solid 1px;
-                        height: 22px;
-                        width: 33px;
-                        margin-left: 10px;
-                        margin-right: 0px;
-                        margin-top: 0px;
-                        margin-bottom: 0px;
-                        padding-top: 0px;
-                        padding-bottom: 0px;
-                    }
-                }
-
-                .ensure {
-                    float: left;
-                    height: 25px;
-                    line-height: 25px;
-                    padding-left: 0px;
-                    margin-left: 0px;
-                }
-            }
-        }
     }
+
+
 
     // 底部部分
     .footer {
@@ -990,5 +771,4 @@
             }
         }
     }
-
 }

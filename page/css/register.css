@@ -200,12 +200,17 @@
 
 .register .header .nav .navAll {
   width: 190px;
-  height: 34px;
-  font-size: 12px;
+  overflow: hidden;
   color: #fff;
-  background: #ff3d3b url(../images/01/08.png) no-repeat 152px 14px;
   float: left;
+}
+
+.register .header .nav .navAll .navA {
+  width: 190px;
+  height: 34px;
   text-align: center;
+  background: #ff3d3b url(../images/01/08.png) no-repeat 152px 14px;
+  font-size: 12px;
   line-height: 34px;
 }
 
@@ -255,6 +260,10 @@
 
 .register .header .serverMenu .xt {
   background: #fff;
+}
+
+.register .header .serverMenu .hide {
+  display: none;
 }
 
 .register .header .serverMenu .xq-block {
@@ -431,6 +440,8 @@
   width: 550px;
   margin-left: 0%;
   float: left;
+  position: relative;
+  z-index: -4;
 }
 
 .register .login .register_L h3 {

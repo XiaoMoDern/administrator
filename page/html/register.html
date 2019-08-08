@@ -71,11 +71,12 @@
                 <div class="register_R">
                     <div class="tit">免费注册</div>
                     <ul class="login-nav">
-                        <li id="bb" class="selected">邮箱注册</li>
-                        <li id="bb">手机号注册</li>
+                        <li id="bb" class=" qt">邮箱注册</li>
+                        <li id="bb" class="selected">手机号注册</li>
                     </ul>
                     <script>
                         $(".login-nav li").click(function () {
+
                             $(".login-nav li").each(function () {
                                 $($(this).attr("#bb")).hide();
                                 $(this).addClass("selected").siblings().removeClass("selected");

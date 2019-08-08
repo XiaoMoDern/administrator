@@ -71,6 +71,13 @@ $(function () {
 
         // 选项卡部分
         // 鼠标移入
+        $('.navAll').on('mouseover', function () {
+            $('.serverMenu').addClass('xq-block')
+        });
+        $('.navAll').on('mouseout', function () {
+            $('.serverMenu').css('display', 'none');
+        });
+
 
         $(".serverMenu").on("mouseover", ".xt_li", function (e) {
             $(e.target).addClass("xt").siblings().removeClass("xt");
@@ -95,6 +102,10 @@ $(function () {
 
 
     });
+
+    $(".qt").click(function () {
+        alert("还没有开放哦！！！！！")
+    })
 
 
     // ---------------------------------------
