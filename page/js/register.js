@@ -357,14 +357,14 @@ $(function () {
         imgCodeText = "222";
         passwordBText = passwordAText = "33333333";
 
-        // console.log($(".form-group-error").length, $(".form-group-error"));
-        // if (usernameText.length != 0 &&
-        //     phoneText.length != 0 &&
-        //     msgText.length != 0 &&
-        //     passwordAText.length != 0 &&
-        //     passwordBText.length != 0 &&
-        //     imgCodeText.length != 0 && $(".form-group-error").length == 0
-        // ) 
+        
+        if (usernameText.length != 0 &&
+            phoneText.length != 0 &&
+            msgText.length != 0 &&
+            passwordAText.length != 0 &&
+            passwordBText.length != 0 &&
+            imgCodeText.length != 0 && $(".form-group-error").length == 0
+        ) 
         {
 
             $.ajax({

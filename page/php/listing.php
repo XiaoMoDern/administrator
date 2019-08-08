@@ -44,22 +44,6 @@ $index = ($page - 1) * $num;
 
 
 // // 区间查询
-
-// if($ret && $hun){
-//   $sql3 = "SELECT * FROM moxi WHERE price BETWEEN $ret AND $hun ORDER BY price $paixu LIMIT $index,$num";
-//   $res3 = $conn->query($sql3);
-
-//   $sql4 = "SELECT  *  FROM  moxi WHERE price BETWEEN $ret AND $hun";
-//   $res4 = $conn->query($sql4);
- 
-//    $kudg = $res4->num_rows;
-//    $toou = $res3->fetch_all(MYSQLI_ASSOC);
-
-// }else{
-//   $kudg = '';
-//   $toou = '';
-// }
-
 switch($orderType){
   case 'init':
   $sql4 =  "SELECT * FROM moxi LIMIT $index,40";
@@ -86,10 +70,6 @@ $content = $res->fetch_all(MYSQLI_ASSOC);
 $sql2 = 'SELECT * FROM moxi';
 
 $res2 = $conn->query($sql2);
-
-
-
-
 
 
 $data = array(
