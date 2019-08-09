@@ -8,8 +8,11 @@
     <title>Document</title>
     <script src="../plug-in/jquery-3.4.1.js"></script>
     <script src="../js/particulars.js"></script>
+    <script src="../plug-in/magnifier.js"></script>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/particulars.css">
+    <link rel="stylesheet" href="../css/magnifier.css">
+
 </head>
 
 <body>
@@ -42,11 +45,10 @@
                     <div class="hyb-detail-box">
                         <div class="hyb-dinfo-box">
                             <!-- 图片展示 -->
-                            <div class="hyb-dinfo-box-left">
+                            <!-- <div class="hyb-dinfo-box-left">
                                 <div class="hyb-p-pic">
                                     <img src="../images/01/tpr1.jpg" alt="">
                                 </div>
-                                <!-- 小图 -->
                                 <div class="hyb-p-list hyb-spec-list">
                                     <ul>
                                         <li class="imgHover">
@@ -57,7 +59,54 @@
 
                                 <a href="" class="hyb-pic-leftBtn hyb-com-picBtn"></a>
                                 <a href="" class="hyb-pic-rightBtn hyb-com-picBtn"></a>
+                            </div> -->
+                            <!-- ------------------------------ -->
+                            <div class="hyb-dinfo-box-left magnifier" id="magnifier1">
+                                <div class="hyb-p-pic magnifier-container">
+                                    <!--当前图片显示容器-->
+                                    <div class="images-cover"><img src="../images/01/tpr1.jpg" alt=""></div>
+                                    <!--跟随鼠标移动的盒子-->
+                                    <div class="move-view"></div>
+                                </div>
+                                <!-- 小图 -->
+                                <div class="magnifier-assembly .hyb-p-list">
+                                    <!--缩略图-->
+                                    <div class=" hyb-spec-list magnifier-line">
+                                        <ul class="clearfix animation03">
+                                            <li class="imgHover">
+                                                <div class="small-img"> <img src="../images/01/tpr1.jpg" alt=""> </div>
+                                            </li>
+                                            <li class="imgHover">
+                                                <div class="small-img">1w </div>
+                                            </li>
+                                            <li class="imgHover">
+                                                <div class="small-img">2w </div>
+                                            </li>
+                                            <li class="imgHover">
+                                                <div class="small-img">3w </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- <a href="" class="hyb-pic-leftBtn hyb-com-picBtn"></a>
+                                    <a href="" class="hyb-pic-rightBtn hyb-com-picBtn"></a> -->
+                                    <!--按钮组-->
+
+                                    <div class="magnifier-btn btnR">
+                                        <a href="javasript:;"
+                                            class="hyb-pic-leftBtn hyb-com-picBtn magnifier-btn-left"></a>
+                                        <a href="javasript:;"
+                                            class="hyb-pic-rightBtn hyb-com-picBtn magnifier-btn-right"></a>
+                                        <!-- <span class="magnifier-btn-left">&lt;</span>
+                                        <span class="magnifier-btn-right">&gt;</span> -->
+                                    </div>
+                                </div>
+                                <!--经过放大的图片显示容器-->
+                                <div class="magnifier-view"></div>
                             </div>
+
+                            <!-- -------------------------------- -->
+
                             <div class="hyb-dinfo-box-center">
                                 <dl>
                                     <dt>

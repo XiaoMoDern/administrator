@@ -1,8 +1,6 @@
 $(function () {
     $(".header-top").load("he-top.html", function () {
-
         // ------------------------------------
-
         class NavManager {
             constructor(data) {
                 this.data = data;
@@ -50,24 +48,14 @@ $(function () {
             }
 
         }
-
         $.getJSON("../js/TabStrip.json", (json) => (new NavManager(json)).renderLabel());
-
-
         // var jq = new NavManager(data);
         // jq.renderLabel();
-
         // ----------------------------------
-
-
         $(".navAll").mouseover(function () {
             // console.log(888);
-
             $(".serverMenu").css("display", "block")
-
         })
-
-
 
         // 选项卡部分
         // 鼠标移入
@@ -77,7 +65,6 @@ $(function () {
         $('.navAll').on('mouseout', function () {
             $('.serverMenu').css('display', 'none');
         });
-
 
         $(".serverMenu").on("mouseover", ".xt_li", function (e) {
             $(e.target).addClass("xt").siblings().removeClass("xt");
@@ -94,12 +81,10 @@ $(function () {
             $(".inServerMenuB").eq(index).addClass("xq-block").removeClass("xq-block")
         })
 
-
     })
 
 
     $(".footer-bottom").load("he-bottom.html", function () {
-
 
     });
 
@@ -107,51 +92,34 @@ $(function () {
         alert("还没有开放哦！！！！！")
     })
 
-
     // ---------------------------------------
-
     /* 图形验证码 */
     let imgCodeText = "";
-    /* 短信验证码 */
+    // /* 短信验证码 */
     var msgText = "";
-    /* 密码 */
+    // /* 密码 */
     let passwordAText = "";
     let passwordBText = "";
-    /* 用户名 */
-    let usernameText = "";
-    /* 手机号码 */
+    // /* 用户名 */
+    // // let usernameText = "";
+    // /* 手机号码 */
     let phoneText = "";
-
-
-    (new Captcha({
-        fontSize: 30,
-        content: "wweyeqytruth12334345425"
-    })).draw(document.querySelector('#captcha'), r => {
-        console.log(r, '验证码1');
-        imgCodeText = r;
-    });
-
-
-
-
     // 正则
     // let regUsername = /^[A-Za-z]{6,8}$/;
     let regPhone = /^1[3-9]\d{9}$/; /* 1开头 第二位3-9 后面全都是数字   11位 */
     let regPassword = /^[a-zA-Z0-9]{6,16}$/;
-
 
     // 获取标签
     let tp = $(".tp");
     let HY = $(".HY");
     let msgCode = $("#msgCode")
     var phone = $(".phone");
-    let passwdrdA = $('#passwdrdA');
-    let passwdrdB = $("#passwdrdB");
+    let passwordA = $('#passwdrdA');
+    let passwordB = $("#passwdrdB");
     let imageCode = $("imageCode");
     let tu = $(".tu")
     let htnl = "x"
     let htvl = "√"
-
 
     function formatterDateTime() {
         var date = new Date()
@@ -176,7 +144,6 @@ $(function () {
         return datetime;
     }
 
-
     HY.click(function () {
         msgCodeText = parseInt(Math.random() * 1000000);
         /* 检查手机号码是否正确 */
@@ -193,6 +160,8 @@ $(function () {
                     "showapi_appid": '101997', //这里需要改成自己的appid
                     "showapi_sign": '01dcd0c0aeab40339708b6e767e0c1a3', //这里需要改成自己的应用的密钥secret
                     "mobile": text,
+
+                    // ${msgCodeText}
                     "content": `{"code":${msgCodeText},"minute":"3","comName":"摩西摩西购物网"}`,
                     "tNum": "T150606060601",
                     "big_msg": ""
@@ -251,7 +220,7 @@ $(function () {
             alert("短信验证码不能为空!")
             $(".h5").html(htnl)
             $(".h5").css("display", "block")
-        } else if (text != msgCodeText) {
+        } else if (text != msgText) {
             $(".h5").html(htnl)
             $(".h5").css("display", "block")
         } else {
@@ -261,13 +230,14 @@ $(function () {
         }
     });
     // 密码验证
-    let passwdrdAtext = "";
-    passwdrdA.blur(function (e) {
+    passwordA.blur(function (e) {
         // 清空格
         let text = $.trim($(this).val());
+        console.log(text);
+
         // 判断内容是否为空
-        passwdrdAtext = text;
-        // console.log(passwdrdAtat);
+        passwordAText = text;
+        // console.log(passwdrdAtext);
 
         if (text.length == 0) {
             // 添加样式
@@ -282,10 +252,9 @@ $(function () {
             $(".h2").css("display", "block")
         }
 
-
     });
     // 确认密码
-    passwdrdB.blur(function (e) {
+    passwordB.blur(function (e) {
         // 清空格
         let text = $.trim($(this).val());
         passwordBText = text;
@@ -296,7 +265,7 @@ $(function () {
             // 添加样式
             $(".h3").html(htnl)
             $(".h3").css("display", "block")
-        } else if (passwdrdAtext != text) {
+        } else if (passwordAText != text) {
             alert("您输入的密码不匹配！")
             $(".h3").html(htnl)
             $(".h3").css("display", "block")
@@ -307,20 +276,31 @@ $(function () {
     });
 
 
+    /* 验证码处理 */
+    (new Captcha({
+        fontSize: 30,
+        content: "wweyeqytruth12334345425"
+    })).draw(document.querySelector('#captcha'), r => {
+        console.log(r, '验证码1');
+        imgCodeText = r;
+        /* 自动触发标签失去焦点的事件 */
+        imageCode.trigger("blur");
+    });
+
+
     // 图片验证码
     tp.blur(function (e) {
         // 清空格
         let text = $.trim($(this).val());
+
+        imgCodeText == text;
+
         // 判断内容是否为空
         if (text.length == 0) {
             // 添加样式
-            // alert("手机号码不能为空！")
-            $(".h4").html(htnl)
-            $(".h4").css("display", "none")
+            alert("验证码不能为空！")
         } else if (imgCodeText.toLowerCase() != text.toLowerCase()) {
-            // alert("验证码不正确！")
-            $(".h4").html(htnl)
-            $(".h4").css("display", "block")
+            alert("验证码不正确！")
         } else {
             $(".h4").html(htvl)
             $(".h4").css("display", "block")
@@ -328,64 +308,68 @@ $(function () {
 
     });
 
-
-    /* 验证码处理 */
-    (new Captcha({
-        fontSize: 30
-    })).draw(document.querySelector('#captcha'), r => {
-        console.log(r, '验证码1');
-        imgCodeText = r;
-        /* 自动触发标签失去焦点的事件 */
-        tp.trigger("blur");
-    });
-
-
-
-
-
     // ----------------
     $("#registerBtn").click(function () {
+        console.log(666);
+
         let isCheck = $("#protocol").is(":checked");
         if (!isCheck) {
             alert("请阅读并同意用户协议");
             return;
         }
 
-        usernameText = "jiji";
-        phoneText = "18689429886";
-        msgText = "111";
-        imgCodeText = "222";
-        passwordBText = passwordAText = "33333333";
+        // usernameText = "jiji";
+        // phoneText = "13567855677";
+        // msgText = "111";
+        // imgCodeText = "222";
+        // passwordBText = "33333333";
+        // passwordAText = "33333333";
+        // console.log(phoneText.length);
+        // console.log(msgText.length);
+        // console.log(passwordAText.length);
+        // console.log(passwordBText.length);
+        // console.log(imgCodeText.length);
 
-        
-        if (usernameText.length != 0 &&
+
+        if (
             phoneText.length != 0 &&
             msgText.length != 0 &&
             passwordAText.length != 0 &&
             passwordBText.length != 0 &&
-            imgCodeText.length != 0 && $(".form-group-error").length == 0
-        ) 
-        {
+            imgCodeText.length != 0
+        ) {
+            console.log(1111);
 
             $.ajax({
                 type: "post",
-                url: "../php/register.phps",
+                url: "../php/register.php",
                 dataType: "json",
-                data: `username=${usernameText}&password=${passwordAText}&phone=${phoneText}`,
-                // dataType: "dataType",
+                data: {
+                    "phone":phoneText,
+                    "passwordA":passwordAText
+                },
                 success: function (response) {
                     console.log(response);
                     /* 先检查请求的结果，然后做出对应的处理 */
                     if (response.status == "success") {
                         alert(response.msg);
                         /* 跳转到登录页面 */
-                        window.location.href = "http://www.baidu.com"
+                        window.location.href = "http://127.0.0.1/project/directorship/page/html/register.html"
                     } else {
                         alert(response.msg);
                     }
                 }
             });
+
+
         }
 
     })
+
+
+
+
+    // 登录
+
+
 })

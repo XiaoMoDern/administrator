@@ -440,8 +440,6 @@
   width: 550px;
   margin-left: 0%;
   float: left;
-  position: relative;
-  z-index: -4;
 }
 
 .register .login .register_L h3 {
@@ -468,7 +466,7 @@
   font-size: 18px;
   color: #999999;
   float: left;
-  margin-left: 28px;
+  margin-left: 38px;
   background: #fff;
   border: #cccccc solid 1px;
   cursor: pointer;

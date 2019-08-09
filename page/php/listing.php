@@ -45,7 +45,7 @@ $index = ($page - 1) * $num;
 
 // // 区间查询
 switch($orderType){
-  case 'init':
+  case 'init':  // 初始化
   $sql4 =  "SELECT * FROM moxi LIMIT $index,40";
   break;
   case 'price':
@@ -66,10 +66,10 @@ $res = $conn->query($sql4);//得到一个结果
 // 得到结果集里面的内容部分
 $content = $res->fetch_all(MYSQLI_ASSOC);
 
-
 $sql2 = 'SELECT * FROM moxi';
 
 $res2 = $conn->query($sql2);
+
 
 
 $data = array(
@@ -77,8 +77,6 @@ $data = array(
 "num" =>$num,
 "data" => $content,
 "pages" =>$res->num_rows,
-
-
 );
  echo json_encode($data);
 ?>

@@ -111,6 +111,7 @@ $(function () {
     let paixu = "";
     // let pages = 0;
 
+    // var ele = '';
 
     function init(orderType) {
         $.ajax({
@@ -123,11 +124,10 @@ $(function () {
                 // console.log(src);
                 var res = src.data.map(function (ele) {
                     // console.log(ele);
-
                     var html = `
-                        <div class="sel-shop-iteam ">
+                        <div class="sel-shop-iteam" data-id=${ele.id}>
                         <div class="s-pic">
-                            <a href=""> <img src="${ele.src}" alt=""></a>
+                            <a href="javascrpt:;"> <img src="${ele.src}" alt=""></a>
                         </div>
                         <div class="cart-price">
                             <strong>
@@ -138,7 +138,7 @@ $(function () {
                             </strong>
                         </div>
                         <div class="s-dec">
-                            <a href="">${ele.title}</a>
+                            <a href="javascrpt:;">${ele.title}</a>
                         </div>
                     </div>
                 `
@@ -163,6 +163,14 @@ $(function () {
         })
     }
     init('init');
+
+
+    $(".select-list").on("click", ".sel-shop-iteam", function () {
+        var gthId = $(this).attr("data-id");
+        window.open(`./particulars.html?data-id=${gthId}`)
+
+    })
+
 
     //3.点击页码，能够按需加载新一页数据过来渲染；事件委托实现事件绑定
     $(".items").on("click", $("li"), function (ev) {
