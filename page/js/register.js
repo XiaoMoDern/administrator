@@ -345,8 +345,8 @@ $(function () {
                 url: "../php/register.php",
                 dataType: "json",
                 data: {
-                    "phone":phoneText,
-                    "passwordA":passwordAText
+                    "phone": phoneText,
+                    "passwordA": passwordAText
                 },
                 success: function (response) {
                     console.log(response);
@@ -370,6 +370,91 @@ $(function () {
 
 
     // 登录
+
+
+
+    var trh = $(".login-1")
+    var tru = $('.login-2')
+    var isok1 = false;
+
+    var trhText = "";
+    trh.blur(function (e) {
+        // 清空格
+        let text = $.trim($(this).val());
+        trhText = text;
+        // 判断内容是否为空
+        if (text.length == 0) {
+            // 添加样式
+            // alert("手机号码不能为空！")
+
+        } else if (!regPhone.test(text)) {
+            alert("请您输入正确的手机号码！")
+
+        } else if (regPhone.test(text)) {
+            // alert("可以登录")
+            $.ajax({
+                type: "post",
+                url: "../php/login.php",
+                data: {
+                    "phone": text,
+                },
+                success: function (response) {
+                    if (response) {
+                        isok1 = true;
+
+                    } else {
+                        isok1 = false;
+                    }
+                }
+            });
+        }
+    });
+    var isok2 = false;
+    var truText = "";
+    tru.blur(function (e) {
+        // 清空格
+        let text = $.trim($(this).val());
+        truText = text;
+
+        // trhText = text;
+        // 判断内容是否为空
+        if (text.length != 0) {
+            // 添加样式
+            // alert("手机号码不能为空！")
+
+            // } else if (regPhone.test(text)) {
+            // alert("可以登录")
+            $.ajax({
+                type: "post",
+                url: "../php/login.php",
+                data: {
+                    "passwordA": text
+                },
+                success: function (response) {
+                    if (response) {
+                        isok2 = true;
+
+                    } else {
+                        isok2 = false;
+                    }
+                }
+            });
+        }
+    });
+
+    $('.loginBtn').click(function () {
+        var jhn = $('.login-1').val();
+        var jhm = $('.login-2').val();
+        setCookie('trh', jhm, 7);
+        setCookie('tru', jhn, 7);
+        if (isok1 == true && isok2 == true) {
+            alert("登录成功！")
+            window.location.href = "http://127.0.0.1/project/directorship/page/html/home-page.html"
+        } else {
+            alert("账号或者密码不正确！")
+        }
+    })
+
 
 
 })

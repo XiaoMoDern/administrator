@@ -42,7 +42,7 @@ $phone = $_REQUEST["phone"];
 //   // $passwdrdB = isset($_POST['passwdrdT']) ;
 //   // $phone = isset($_POST['phone']);
 
-$sql = "INSERT INTO `DFYG` (`phone`,`passwordA`) VALUES ('$phone','$passwordA')";
+$sql = "INSERT INTO `dfyg` (`phone`,`passwordA`) VALUES ('$phone','$passwordA')";
 // $sql ="INSERT INTO `DFYG`(`phone`) VALUES('$phone')"
 // echo $sql;
 $result = mysqli_query($conn, $sql);
