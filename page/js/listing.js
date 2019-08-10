@@ -148,7 +148,7 @@ $(function () {
                 $(list).html(res);
 
 
-
+                
                 // 生成页码
                 let pages = Math.ceil(src.pages / src.num)
                 let pageBtns = "";
@@ -167,7 +167,7 @@ $(function () {
 
     $(".select-list").on("click", ".sel-shop-iteam", function () {
         var gthId = $(this).attr("data-id");
-        window.open(`./particulars.html?data-id=${gthId}`)
+        window.open(`./particulars.html?id=${gthId}`)
 
     })
 

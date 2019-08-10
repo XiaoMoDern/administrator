@@ -373,8 +373,11 @@ $(function () {
 
 
 
-    var trh = $(".login-1")
-    var tru = $('.login-2')
+    var trh = $(".login-1");
+    var tru = $('.login-2');
+
+
+
     var isok1 = false;
 
     var trhText = "";
@@ -399,6 +402,8 @@ $(function () {
                     "phone": text,
                 },
                 success: function (response) {
+                    console.log(response);
+
                     if (response) {
                         isok1 = true;
 
@@ -431,6 +436,8 @@ $(function () {
                     "passwordA": text
                 },
                 success: function (response) {
+                    console.log(response);
+
                     if (response) {
                         isok2 = true;
 
@@ -447,11 +454,13 @@ $(function () {
         var jhm = $('.login-2').val();
         setCookie('trh', jhm, 7);
         setCookie('tru', jhn, 7);
-        if (isok1 == true && isok2 == true) {
-            alert("登录成功！")
-            window.location.href = "http://127.0.0.1/project/directorship/page/html/home-page.html"
-        } else {
+        if (isok1 == false && isok2 == false) {
             alert("账号或者密码不正确！")
+            // alert("登录成功！")
+            // window.location.href = "http://127.0.0.1/project/directorship/page/html/home-page.html"
+        } else {
+            // alert("账号或者密码不正确！")
+            alert("登录成功！")
         }
     })
 

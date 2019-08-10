@@ -3,7 +3,7 @@
 
   $page = isset($_GET['page']) ? $_GET['page'] : '';//页数，哪一页
   $num = isset($_GET['num']) ? $_GET['num'] : '';//一页数据有10条
-  $paixu =  isset($_GET['paixu']) ? $_GET['paixu'] : "";
+  // $paixu =  isset($_GET['paixu']) ? $_GET['paixu'] : "";
   $ret = isset($_GET['ret']) ? $_GET['ret'] : "";
   $hun = isset($_GET['hun']) ? $_GET['hun'] : "";
   $orderType =isset($_GET['orderType']) ? $_GET['orderType'] : "";
@@ -30,6 +30,7 @@ $conn->set_charset("utf8");
 // 写sql语句查询数据（建议在Navicat的查询里写好在粘贴来php）
 
 $index = ($page - 1) * $num;
+
 // $sql = "SELECT * FROM moxi LIMIT $index,40";  //得到字符串
 
 // 执行sql语句
