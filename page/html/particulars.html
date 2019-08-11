@@ -9,9 +9,58 @@
     <script src="../plug-in/jquery-3.4.1.js"></script>
     <script src="../js/particulars.js"></script>
     <script src="../plug-in/magnifier.js"></script>
+
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/particulars.css">
     <link rel="stylesheet" href="../css/magnifier.css">
+
+    <style>
+        .ew {
+            position: absolute;
+            left: 500px;
+            top: 220px;
+        }
+
+        .my_model {
+            width: 300px;
+            height: 150px;
+            background: #58bc58;
+            margin: 150px auto;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+            display: none;
+        }
+
+        .title {
+
+            padding-top: 28px
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .closeModel {
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+
+        .opBtn a {
+            margin: 10px;
+
+        }
+
+        .ae {
+            display: none;
+        }
+
+        .ab {
+            display: block;
+        }
+    </style>
 
 </head>
 
@@ -233,11 +282,34 @@
             </div>
         </div>
 
+
+        <!-- 弹窗 -->
+        <div class="ew">
+            <section class="my_model itemdel">
+                <p class="title">添加成功</p>
+                <span class="closeModel">X</span>
+                <p>恭喜你成功加入购物车！</p>
+                <!-- <div class="opBtn">
+                    <a href="javascript:;" class="dialog-sure">确定
+                    </a>
+                </div> -->
+            </section>
+            <script>
+                // $('.dialog-sure').click(function () {
+                //     $('.itemdel').addClass('ae')
+                // });
+                $(".closeModel").click(function () {
+                    $(this).parent().hide(2000);
+
+                })
+            </script>
+        </div>
         <!-- 底部部分 -->
         <div class="footerR"></div>
 
     </div>
 
 </body>
+<script src="../plug-in/common.js"></script>
 
 </html>

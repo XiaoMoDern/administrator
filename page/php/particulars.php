@@ -1,5 +1,6 @@
 <?php
 
+
 // 防止中文出现乱码
 header('Content-type:text/html;charset=utf-8');
 // 01-先连接到服务器的数据库(选择表)
@@ -23,6 +24,7 @@ if($conn->connect_error){
 // echo "连接成功";
 $conn->set_charset("utf8");
 // 写sql语句查询数据（建议在Navicat的查询里写好在粘贴来php）
+
 
 
 

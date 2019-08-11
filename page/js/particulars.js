@@ -91,6 +91,11 @@ $(function () {
             $(".inServerMenuB").eq(index).addClass("xq-block").removeClass("xq-block")
         })
 
+        // 点击购物车按钮跳转购物车页面
+        $(".trg").click(function () {
+            location.href = ("./Shopping.html")
+        })
+
 
     })
 
@@ -101,6 +106,7 @@ $(function () {
 
 
     var html = window.location.search.slice(-1);
+
 
 
     function particulars() {
@@ -252,7 +258,7 @@ $(function () {
     </dd>
     <dd class="hyb-pcom-dd hyb-p-btn">
         <div class="hyb-p-dd">
-            <a href="" class="btn-append">加入购物车</a>
+            <a href="javascript:;" class="btn-append">加入购物车</a>
             <a href="" class="btn-buy">立刻购买</a>
         </div>
     </dd>
@@ -286,6 +292,33 @@ $(function () {
     trus();
 
 
+    // 点击加入购物车
+
+    $(".xian").on("click", ".btn-append", function () {
+        var html = window.location.search.slice(-1);
+        var userName = getCookie("tru");
+        // console.log(userName);
+        // console.log(html);
+
+        $.ajax({
+            type: "post",
+            url: "../php/cart.php",
+            data: {
+                "usman": html,
+                "userName": userName
+            },
+            success: function (response) {
+                console.log(response);
+
+            }
+        });
+
+
+
+        $(".itemdel").addClass('ab')
+
+
+    })
 
 
     $('.footerR').load('he-bottom.html');
